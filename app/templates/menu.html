@@ -1,0 +1,84 @@
+
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+   <div class="navbar-brand">
+     <a class="navbar-item" href="https://boizot.ch">
+       <img src="https://boizot.ch/img/pierre.jpg" width="28" height="28">
+     </a>
+
+     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+       <span aria-hidden="true"></span>
+       <span aria-hidden="true"></span>
+       <span aria-hidden="true"></span>
+     </a>
+   </div>
+
+   <div id="navbarBasicExample" class="navbar-menu">
+     <div class="navbar-start">
+       <a class="navbar-item" href="{{ url_for('homepage')}}">{{ _('Accueil') }}</a>
+
+       <div class="navbar-item has-dropdown is-hoverable">
+       <a class="navbar-link"> {{_('Livres')}}  </a>
+
+     <div class="navbar-dropdown">
+     <a class="navbar-item" href="{{url_for('livres')}}">{{ _('Lister') }}</a>
+     <a class="navbar-item" href="{{url_for('addlivre')}}">{{ _('Ajouter') }}</a>
+
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link"> {{ _('Recherche')}}  </a>
+
+    <div class="navbar-dropdown">
+      <a class="navbar-item" href="{{url_for('cherpartitre')}}">{{ _('par Titre') }}</a>
+      <a class="navbar-item" href="{{url_for('cherparuser')}}">{{ _('par Créateur')}} </a>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link"> {{ _('Gestion connexion')}} </a>
+
+      <div class="navbar-dropdown">
+
+        <a class="navbar-item  " href="{{url_for('login')}}"">{{ _('Connection')}}</a>
+        <a class="navbar-item " href="{{url_for('logout')}}"">{{ _('De-connection')}}</a>
+        <a class="navbar-item " href="{{url_for('register')}}"">{{ _('Enregistrement')}}</a>
+
+     </div>
+
+   </div>
+
+    <!-- Gestion de la langue -->
+       <div class="navbar-item has-dropdown is-hoverable">
+
+         <a class="navbar-link"> {{ _('Changer de langue')}} </a>
+         <div class="navbar-dropdown">
+         {% for language in AVAILABLE_LANGUAGES.items() %}
+             {% if CURRENT_LANGUAGE == language[0] %}
+                <a class="navbar-item is-active" href="{{ url_for('set_language', language=language[0]) }}"> {{language[1] }} </a>
+             {% else %}
+                 <a class="navbar-item" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
+             {%  endif %}
+         {% endfor %}
+       </div>
+       </div>
+
+       <a class="navbar-item" href="{{url_for('about')}}">{{ _('Au sujet') }}</a>
+
+
+     </div>
+   </div>
+
+ </nav>
+
+ <script type="text/javascript">
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+    </script>

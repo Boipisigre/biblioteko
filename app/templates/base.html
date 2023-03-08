@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bulma CSS  -->
+     <link rel="stylesheet" href="{{url_for('static', filename='main.min.css')}}">
+
+  <title>{% block title %} {% endblock %}</title>
+
+  <script src="{{url_for('static',filename='main.min.js')}}"></script>
+
+  </head>
+
+<body>
+<br/>
+{% include 'menu.html' %}
+
+<div class="container">
+<br/>
+        {% block content %} {% endblock %}
+</div>
+{% include 'footer.html' %}
+</body>
+</html>
