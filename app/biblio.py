@@ -2,6 +2,7 @@ from flask import render_template, redirect, request, session, url_for
 from app.forms import EmailForm
 from flask_babel import Babel
 from app import app, babel
+from database import *
 
 def get_locale():
 	# If the user has set up the language manually it will be stored in the session
@@ -41,7 +42,8 @@ def about():
 
 @app.route("/livres")
 def livres():
-	return render_template('index.html')
+	lesnotes=get_notes("*")
+	return render_template('livres.html', posts=lesnotes)
 
 @app.route("/ajout")
 def addlivre():
