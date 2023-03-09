@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-09 17:18+0100\n"
+"POT-Creation-Date: 2023-03-09 21:28+0100\n"
 "PO-Revision-Date: 2023-03-08 16:54+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: eo\n"
@@ -153,3 +153,32 @@ msgstr "Registri uzanton"
 #: app/templates/menu.html:54
 msgid "Changer de langue"
 msgstr "ŝanĝi lingvon"
+
+#: app/templates/recherche.html:5
+msgid "Rechercher"
+msgstr "Serĉi"
+
+#: app/templates/recherche.html:5
+msgid "les livres"
+msgstr "Librojn"
+
+#: app/templates/recherche.html:9
+msgid "par titre"
+msgstr "per titolo"
+
+#: app/templates/recherche.html:10
+msgid "Saisissez le titre"
+msgstr "Enigu la titolo"
+
+#: app/templates/recherche.html:14
+#, fuzzy
+msgid "Rechercher!"
+msgstr "Serĉi"
+
+#: app/templates/recherche.html:21
+msgid "par auteur"
+msgstr "per Aũtoro"
+
+#: app/templates/recherche.html:22
+msgid "Saisissez le nom"
+msgstr "Enigu la nomo"

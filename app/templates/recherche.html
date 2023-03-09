@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<h1 class='title'> {% block title %} {{ _('Rechercher')}} {% endblock %} {{ _('les livres')}}  </h1>
+<hr>
+{% if query == "titre" %}
+<center>
+<h2 class='subtitle is-2'> {{ _('par titre')}} </h2>
+<h2 class="subtitile is-3"> {{ _('Saisissez le titre')}} </h2>
+<hr>
+<form action="/rechercher" method="get">
+  <input type="text" id="message" name="titre" value="*" required maxlength="15" size="16">
+  <input type="submit" value="Rechercher!">
+</form>
+</center>
+<hr>
+{% endif %}
+{% if query == "user" %}
+  <center>
+<h2 class='subtitle is-2'> {{ _('par auteur')}} </h2>
+<h2 class="subtitile is-3"> {{ _('Saisissez le nom')}} </h2>
+  <hr>
+
+<form action="/recheruser" method="get">
+  <input type="text" id="message" name="user" value="*" required maxlength="15" size="16">
+  <input type="submit" value="Rechercher!">
+</form>
+</center>
+<hr>
+
+{% endif %}
+</body>
+{% endblock %}

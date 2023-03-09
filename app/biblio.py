@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, session, url_for
+from flask import render_template, redirect, request, session, url_for, flash
 from app.forms import EmailForm
 from flask_babel import Babel
 from app import app, babel
@@ -51,11 +51,40 @@ def addlivre():
 
 @app.route("/cherparuser")
 def cherparuser():
-	return render_template('index.html')
+	return render_template('recherche.html', query="user")
 
 @app.route("/cherpartitre")
 def cherpartitre():
-	return render_template('index.html')
+	return render_template("recherche.html",query="titre")
+
+@app.route("/rechercher")
+def rechercher():
+    # return "résultat de ma recherche"
+    txt_recherche =request.args.get("titre")
+    lesnotes=get_notes(txt_recherche)
+    trouvé=False
+    if len(lesnotes) > 0:
+        trouvé=True
+
+    if not(trouvé):
+        flash('Livre non trouvé!')
+
+    return render_template('livres.html', posts=lesnotes)
+
+@app.route("/recheruser")
+def recheruser():
+    # return "résultat de ma recherche"
+    txt_recherche =request.args.get("user")
+    # notepage = render_template("notes.html")
+    lesnotes=get_notes_user(txt_recherche)
+    trouvé=False
+    if len(lesnotes) > 0:
+        trouvé=True
+
+    if not(trouvé):
+        flash('Livre non trouvé!')
+
+    return render_template('livres.html', posts=lesnotes)
 
 @app.route("/connection")
 def login():

@@ -38,7 +38,7 @@ def get_notes_user(filtre):
     if filtre == "*":
         notes = ltable.execute("select * from libroj").fetchall()
     else:
-        filtre=filtre.upper()+"%"
+        filtre="%"+filtre.upper()+"%"
         # print(filtre)
         notes = ltable.execute("select * from libroj where upper(Aŭtoro) like ?",[filtre,]).fetchall()# print(notes)
         # print(notes)
