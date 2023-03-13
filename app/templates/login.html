@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}  Connection  {% endblock %}
+{% block content %}
+
+<hr>
+
+<center>
+<h1 class='title'> Connection</h1>
+<h2 class="subtitile is-3"> Saisissez votre nom </h2>
+  <hr>
+
+<form onsubmit="save_data()" action="/login" method="get">
+  <input type="text" id="message" name="username" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Log in">
+</form>
+
+</center>
+
+<hr>
+
+{% endblock %}

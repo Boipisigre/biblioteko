@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body  onload=clearnom(); >
+
+<h1 class='title'> {% block title %} Enregistrement {% endblock %} de l'Utilisateur  </h1>
+<hr>
+
+  <center>
+
+<h2 class="subtitile is-3"> Saisissez votre nom et mot de passe </h2>
+  <hr>
+
+<form onsubmit="save_data()" action="/registeruser" method="get">
+  <input type="text" id="message" name="username" required placeholder="Username">
+  <input type="password" name="password" required placeholder="Password">
+  <input type="submit" value="Sauver">
+</form>
+
+</center>
+<hr>
+
+</body>
+{% endblock %}

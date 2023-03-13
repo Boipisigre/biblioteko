@@ -1,4 +1,6 @@
 from flask import render_template, redirect, request, session, url_for, flash
+from werkzeug.exceptions import abort
+from werkzeug.security import generate_password_hash, check_password_hash
 from app.forms import EmailForm
 from flask_babel import Babel
 from app import app, babel
@@ -88,12 +90,42 @@ def recheruser():
 
 @app.route("/connection")
 def login():
-	return render_template('index.html')
+    return render_template("login.html")
 
+@app.route('/login', methods=['POST',"GET"])
+def do_admin_login():
+    nom=request.args.get("username")
+    pwd=get_user(nom)
+    session['logged_in'] = False
+    if pwd is None :
+        flash('Utilisateur inconnu!')
+    else:
+        if check_password_hash(pwd[0], request.args.get("password")):
+            session['logged_in'] = True
+            session['user_name'] = nom
+        else:
+            flash('Mot de passe éroné!')
+
+    return homepage()
+
+@app.route('/register', methods=['POST',"GET"])
+@app.route("/enregistre", methods=['POST',"GET"])
+def register():
+    return render_template("register.html")
+
+@app.route('/logout')
 @app.route("/deconnection")
 def logout():
-	return render_template('index.html')
+    session['logged_in'] = False
+    return render_template("index.html")
 
-@app.route("/enregistre")
-def register():
-	return render_template('index.html')
+
+@app.route('/registeruser', methods=['POST',"GET"])
+def registeruser():
+
+    nom=request.args.get("username")
+    pwd=request.args.get("password")
+    hashpwd=generate_password_hash(pwd)
+    add_user(nom, hashpwd)
+    session['logged_in'] = False
+    return homepage()
