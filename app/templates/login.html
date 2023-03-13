@@ -5,14 +5,15 @@
 <hr>
 
 <center>
-<h1 class='title'> Connection</h1>
-<h2 class="subtitile is-3"> Saisissez votre nom </h2>
+<h1 class='title'> {{ _('Connection') }}</h1>
+<h2 class="subtitile is-3"> {{ _('Saisissez votre nom') }} </h2>
   <hr>
 
 <form onsubmit="save_data()" action="/login" method="get">
-  <input type="text" id="message" name="username" placeholder="Username">
-  <input type="password" name="password" placeholder="Password">
-  <input type="submit" value="Log in">
+  <input type="text" id="message" name="username" required  placeholder={{ _('Votre_Nom') }} >
+
+  <input type="password" name="password" required placeholder={{ _('Mot_de_Passe') }}>
+  <input type="submit" value={{ _('Connecter') }}>
 </form>
 
 </center>

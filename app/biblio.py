@@ -45,7 +45,7 @@ def about():
 @app.route("/livres")
 def livres():
 	lesnotes=get_notes("*")
-	return render_template('livres.html', posts=lesnotes)
+	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/ajout")
 def addlivre():
@@ -64,14 +64,7 @@ def rechercher():
     # return "résultat de ma recherche"
     txt_recherche =request.args.get("titre")
     lesnotes=get_notes(txt_recherche)
-    trouvé=False
-    if len(lesnotes) > 0:
-        trouvé=True
-
-    if not(trouvé):
-        flash('Livre non trouvé!')
-
-    return render_template('livres.html', posts=lesnotes)
+    return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/recheruser")
 def recheruser():
@@ -79,14 +72,7 @@ def recheruser():
     txt_recherche =request.args.get("user")
     # notepage = render_template("notes.html")
     lesnotes=get_notes_user(txt_recherche)
-    trouvé=False
-    if len(lesnotes) > 0:
-        trouvé=True
-
-    if not(trouvé):
-        flash('Livre non trouvé!')
-
-    return render_template('livres.html', posts=lesnotes)
+    return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/connection")
 def login():
@@ -106,7 +92,7 @@ def do_admin_login():
         else:
             flash('Mot de passe éroné!')
 
-    return homepage()
+    return render_template("index.html")
 
 @app.route('/register', methods=['POST',"GET"])
 @app.route("/enregistre", methods=['POST',"GET"])
@@ -128,4 +114,4 @@ def registeruser():
     hashpwd=generate_password_hash(pwd)
     add_user(nom, hashpwd)
     session['logged_in'] = False
-    return homepage()
+    return render_template("index.html")
