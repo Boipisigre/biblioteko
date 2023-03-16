@@ -22,7 +22,12 @@
 
      <div class="navbar-dropdown">
      <a class="navbar-item" href="{{url_for('livres')}}">{{ _('Lister') }}</a>
+
+     {% if session['logged_in'] %}
      <a class="navbar-item" href="{{url_for('addlivre')}}">{{ _('Ajouter') }}</a>
+     {% else %}
+      <a class="navbar-item" href="#">{{ _('Ajouter') }}</a>
+      {% endif %}
 
   <div class="navbar-item has-dropdown is-hoverable">
     <a class="navbar-link"> {{ _('Recherche')}}  </a>
@@ -39,10 +44,15 @@
       <a class="navbar-link"> {{ _('Gestion connexion')}} </a>
 
       <div class="navbar-dropdown">
-
-        <a class="navbar-item  " href="{{url_for('login')}}"">{{ _('Connection')}}</a>
-        <a class="navbar-item " href="{{url_for('logout')}}"">{{ _('De-connection')}}</a>
-        <a class="navbar-item " href="{{url_for('register')}}"">{{ _('Enregistrement')}}</a>
+{% if session['logged_in'] %}
+        <a class="navbar-item  " href="#">{{ _('Connection')}}</a>
+        <a class="navbar-item is-active" href="{{url_for('logout')}}"">{{ _('De-connection')}}</a>
+        <a class="navbar-item " href="#">{{ _('Enregistrement')}}</a>
+{% else %}
+  <a class="navbar-item is-active " href="{{url_for('login')}}"">{{ _('Connection')}}</a>
+  <a class="navbar-item " href="#">{{ _('De-connection')}}</a>
+  <a class="navbar-item is-active" href="{{url_for('register')}}"">{{ _('Enregistrement')}}</a>
+{% endif %}
 
      </div>
 
@@ -55,9 +65,9 @@
          <div class="navbar-dropdown">
          {% for language in AVAILABLE_LANGUAGES.items() %}
              {% if CURRENT_LANGUAGE == language[0] %}
-                <a class="navbar-item is-active" href="#"> {{language[1] }} </a>
+                <a class="navbar-item " href="#"> {{language[1] }} </a>
              {% else %}
-                 <a class="navbar-item" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
+                 <a class="navbar-item is-active" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
              {%  endif %}
          {% endfor %}
        </div>

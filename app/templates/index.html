@@ -3,7 +3,12 @@
 
 <div class="container">
     <div class="center">
-        <h2>{{ _('Bonjour') }}</h2>
+        <h2>{{ _('Bonjour') }}
+          {% if session['logged_in'] %}
+          {{session['user_name']}}
+        {% else%}
+          {{ _('Vous pas connecté') }}
+        {% endif %} </h2>
         <hr>
         <p>{{ _('Bienvenue sur la bibliothèque de l association d Esperanto de Lausanne') }}</p>
 
