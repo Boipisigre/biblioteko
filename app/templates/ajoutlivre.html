@@ -1,32 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<body onload=remplirnom()>
-    <h1 class='title is-2'>{% block title %} Ajout {% endblock %} d'une note  </h1>
+    <h1 class='title is-2'>{% block title %} Ajout {% endblock %} d'un livre  </h1>
 
     <hr>
 
 <center>
-<h2 class="subtitle is-4"> Saisissez votre note</h2>
+<h2 class="subtitle is-4"> Saisissez les informations</h2>
 
 <form action="/ajoutnote" method="post">
   <div class="form-group">
+    <label for="rubrique">Rubrique:</label> <br/>
+    <input type="text" name="rubrique"
+                   required size="1"
+                   placeholder="R" class="form-control"
+                   value="{{ request.form['rubrique'] }}"></input>
+</div>
+<div class="form-group">
+    <label for="id">Id:</label> <br/>
+    <input type="number" name="Id" required  placeholder="300" class="form-control" size="3"
+                                  value="{{ request.form['ID'] }}"></input>
+</div>
+<div class="form-group">
     <label for="titre">Titre:</label> <br/>
     <input type="text" name="titre"
                   required
-                   placeholder="Le Titre" class="form-control"
+                   placeholder="Le Titre" class="form-control" size="60"
                    value="{{ request.form['titre'] }}"></input>
   </div>
   <div class="form-group">
-    <label for="createur">Createur:</label> <br/>
-    <input type="text" name="createur" readonly
-                   placeholder="Le Titre" class="form-control"
-                   value="{{ request.form['createur'] }}"></input>
+    <label for="auteur">Auteur:</label> <br/>
+    <input type="text" name="auteur" readonly
+                   placeholder="Auteur" class="form-control" size="32"
+                   value="{{ request.form['auteur'] }}"></input>
   </div>
   <div class="form-group">
-    <label for="corps">Contenu de la note:</label> <br/>
-    <textarea name="corps" placeholder="Saisissez la note" rows="5" cols="50"
-                  class="form-control"> {{ request.form['corps'] }}</textarea>
+    <label for="editeur">Editeur :</label> <br/>
+    <input type="text" name="editeur" placeholder="Edition" size="50"
+                  class="form-control"> {{ request.form['editeur'] }}</input>
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Sauver</button>
@@ -36,5 +47,4 @@
 </center>
 <hr>
 
-</body>
 {% endblock %}

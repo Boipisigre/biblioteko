@@ -56,16 +56,13 @@ def ajoutlivre():
     message = ""
     if request.method == 'POST':
         txt_titre = request.form['titre']
-        txt_createur = request.form['createur']
-        txt_corps = request.form["corps"]
-        if not txt_titre :
-            flash('Un titre est obligatoire!')
-        else:
-            txt_corps = txt_corps.replace("\n"," ")
-            # note = txt_titre + " € " + txt_corps + "\n"
-            add_notes(txt_titre,txt_corps,txt_createur)
-            message = " La note "+ txt_titre + "est ajoutée "
-    return notes()
+		txt_id = request.form['id']
+		txt_rubrique = request.form['rubrique']
+        txt_auteur = request.form['auteur']
+        txt_editeur = request.form["editeur"]
+        add_notes(txt_titre,txt_corps,txt_createur)
+
+    return livres()
 
 
 @app.route("/cherparuser")
