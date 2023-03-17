@@ -53,16 +53,14 @@ def addlivre():
 
 @app.route("/ajoutnote", methods=('GET', 'POST'))
 def ajoutlivre():
-    message = ""
-    if request.method == 'POST':
-        txt_titre = request.form['titre']
+	if request.method == 'POST':
+		txt_titre = request.form['titre']
 		txt_id = request.form['id']
 		txt_rubrique = request.form['rubrique']
-        txt_auteur = request.form['auteur']
-        txt_editeur = request.form["editeur"]
-        add_notes(txt_titre,txt_corps,txt_createur)
-
-    return livres()
+		txt_auteur = request.form['auteur']
+		txt_editeur = request.form["editeur"]
+		add_notes(txt_id, txt_titre,txt_rubrique,txt_auteur, txt_editeur)
+	return livres()
 
 
 @app.route("/cherparuser")

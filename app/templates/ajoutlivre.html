@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class='title is-2'>{% block title %} Ajout {% endblock %} d'un livre  </h1>
+    <h1 class='title is-2'>{% block title %} {{ _('Ajout') }} {% endblock %} d'un livre  </h1>
 
     <hr>
 
 <center>
-<h2 class="subtitle is-4"> Saisissez les informations</h2>
+<h2 class="subtitle is-4"> {{ _('Saisissez les informations') }}</h2>
 
 <form action="/ajoutnote" method="post">
   <div class="form-group">
-    <label for="rubrique">Rubrique:</label> <br/>
+    <label for="rubrique">{{ _('Rubrique') }}:</label> <br/>
     <input type="text" name="rubrique"
                    required size="1"
                    placeholder="R" class="form-control"
@@ -18,7 +18,7 @@
 </div>
 <div class="form-group">
     <label for="id">Id:</label> <br/>
-    <input type="number" name="Id" required  placeholder="300" class="form-control" size="3"
+    <input type="number" name="id" required  placeholder="300" class="form-control" size="3"
                                   value="{{ request.form['ID'] }}"></input>
 </div>
 <div class="form-group">
@@ -30,8 +30,7 @@
   </div>
   <div class="form-group">
     <label for="auteur">Auteur:</label> <br/>
-    <input type="text" name="auteur" readonly
-                   placeholder="Auteur" class="form-control" size="32"
+    <input type="text" name="auteur" placeholder="Auteur" class="form-control" size="32"
                    value="{{ request.form['auteur'] }}"></input>
   </div>
   <div class="form-group">

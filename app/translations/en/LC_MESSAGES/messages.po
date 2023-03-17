@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-13 11:58+0100\n"
+"POT-Creation-Date: 2023-03-17 14:13+0100\n"
 "PO-Revision-Date: 2023-03-13 11:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "E-mail address"
 msgstr ""
 
-#: app/templates/about.html:4 app/templates/menu.html:66
+#: app/templates/about.html:4 app/templates/menu.html:76
 msgid "Au sujet"
 msgstr ""
 
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Rechercher des livres"
 msgstr ""
 
-#: app/templates/about.html:20 app/templates/menu.html:31
+#: app/templates/about.html:20 app/templates/menu.html:36
 msgid "par Titre"
 msgstr ""
 
@@ -78,6 +78,18 @@ msgstr ""
 msgid "Explication"
 msgstr ""
 
+#: app/templates/ajoutlivre.html:4
+msgid "Ajout"
+msgstr ""
+
+#: app/templates/ajoutlivre.html:9
+msgid "Saisissez les informations"
+msgstr ""
+
+#: app/templates/ajoutlivre.html:13
+msgid "Rubrique"
+msgstr ""
+
 #: app/templates/footer.html:4 app/templates/livres.html:16
 msgid "Auteur"
 msgstr ""
@@ -86,7 +98,11 @@ msgstr ""
 msgid "Bonjour"
 msgstr "Hello"
 
-#: app/templates/index.html:8
+#: app/templates/index.html:10
+msgid "Vous pas connecté"
+msgstr ""
+
+#: app/templates/index.html:13
 msgid "Bienvenue sur la bibliothèque de l association d Esperanto de Lausanne"
 msgstr "Welcome on the library of Esperanto association"
 
@@ -110,7 +126,8 @@ msgstr ""
 msgid "Création"
 msgstr ""
 
-#: app/templates/login.html:8 app/templates/menu.html:43
+#: app/templates/login.html:8 app/templates/menu.html:48
+#: app/templates/menu.html:52
 msgid "Connection"
 msgstr ""
 
@@ -142,35 +159,37 @@ msgstr ""
 msgid "Lister"
 msgstr ""
 
-#: app/templates/menu.html:25
+#: app/templates/menu.html:27 app/templates/menu.html:29
 msgid "Ajouter"
 msgstr ""
 
-#: app/templates/menu.html:28
+#: app/templates/menu.html:33
 msgid "Recherche"
 msgstr ""
 
-#: app/templates/menu.html:32
+#: app/templates/menu.html:37
 msgid "par Créateur"
 msgstr ""
 
-#: app/templates/menu.html:39
+#: app/templates/menu.html:44
 msgid "Gestion connexion"
 msgstr ""
 
-#: app/templates/menu.html:44
+#: app/templates/menu.html:49 app/templates/menu.html:53
 msgid "De-connection"
 msgstr ""
 
-#: app/templates/menu.html:45 app/templates/register.html:5
+#: app/templates/menu.html:50 app/templates/menu.html:54
+#: app/templates/register.html:5
 msgid "Enregistrement"
 msgstr ""
 
-#: app/templates/menu.html:54
+#: app/templates/menu.html:64
 msgid "Changer de langue"
 msgstr ""
 
-#: app/templates/recherche.html:5
+#: app/templates/recherche.html:5 app/templates/recherche.html:14
+#: app/templates/recherche.html:27
 msgid "Rechercher"
 msgstr ""
 
