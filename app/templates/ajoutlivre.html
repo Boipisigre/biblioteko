@@ -22,24 +22,24 @@
                                   value="{{ request.form['ID'] }}"></input>
 </div>
 <div class="form-group">
-    <label for="titre">Titre:</label> <br/>
+    <label for="titre">{{ _('Titre') }}:</label> <br/>
     <input type="text" name="titre"
                   required
                    placeholder="Le Titre" class="form-control" size="60"
                    value="{{ request.form['titre'] }}"></input>
   </div>
   <div class="form-group">
-    <label for="auteur">Auteur:</label> <br/>
+    <label for="auteur">{{ _('Auteur') }}:</label> <br/>
     <input type="text" name="auteur" placeholder="Auteur" class="form-control" size="32"
                    value="{{ request.form['auteur'] }}"></input>
   </div>
   <div class="form-group">
-    <label for="editeur">Editeur :</label> <br/>
+    <label for="editeur">{{ _('Editeur') }} :</label> <br/>
     <input type="text" name="editeur" placeholder="Edition" size="50"
                   class="form-control"> {{ request.form['editeur'] }}</input>
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">Sauver</button>
+    <button type="submit" class="btn btn-primary">{{ _('Sauver') }}</button>
   </div>
 
 </form>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-17 14:13+0100\n"
+"POT-Creation-Date: 2023-03-24 10:17+0100\n"
 "PO-Revision-Date: 2023-03-08 16:54+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: eo\n"
@@ -88,11 +88,24 @@ msgstr "Enigu la informojn"
 
 #: app/templates/ajoutlivre.html:13
 msgid "Rubrique"
-msgstr "Rubriko
+msgstr "Rubrik"
 
-#: app/templates/footer.html:4 app/templates/livres.html:16
+#: app/templates/ajoutlivre.html:25 app/templates/livres.html:17
+msgid "Titre"
+msgstr "Titolo"
+
+#: app/templates/ajoutlivre.html:32 app/templates/footer.html:4
+#: app/templates/livres.html:16
 msgid "Auteur"
 msgstr "Aũtoro"
+
+#: app/templates/ajoutlivre.html:37
+msgid "Editeur"
+msgstr "Eldono"
+
+#: app/templates/ajoutlivre.html:42
+msgid "Sauver"
+msgstr "Savi"
 
 #: app/templates/index.html:6
 msgid "Bonjour"
@@ -117,10 +130,6 @@ msgstr "Libroj"
 #: app/templates/livres.html:15
 msgid "Numéro"
 msgstr ""
-
-#: app/templates/livres.html:17
-msgid "Titre"
-msgstr "Titolo"
 
 #: app/templates/livres.html:18
 msgid "Création"
@@ -223,4 +232,3 @@ msgstr "Enigu vian nomon kaj pasvorton"
 
 #~ msgid "Rechercher!"
 #~ msgstr "Serĉi"
-

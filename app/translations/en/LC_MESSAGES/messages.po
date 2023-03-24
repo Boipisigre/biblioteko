@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-17 14:13+0100\n"
+"POT-Creation-Date: 2023-03-24 10:17+0100\n"
 "PO-Revision-Date: 2023-03-13 11:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -90,8 +90,21 @@ msgstr ""
 msgid "Rubrique"
 msgstr ""
 
-#: app/templates/footer.html:4 app/templates/livres.html:16
+#: app/templates/ajoutlivre.html:25 app/templates/livres.html:17
+msgid "Titre"
+msgstr ""
+
+#: app/templates/ajoutlivre.html:32 app/templates/footer.html:4
+#: app/templates/livres.html:16
 msgid "Auteur"
+msgstr ""
+
+#: app/templates/ajoutlivre.html:37
+msgid "Editeur"
+msgstr ""
+
+#: app/templates/ajoutlivre.html:42
+msgid "Sauver"
 msgstr ""
 
 #: app/templates/index.html:6
@@ -116,10 +129,6 @@ msgstr ""
 
 #: app/templates/livres.html:15
 msgid "Numéro"
-msgstr ""
-
-#: app/templates/livres.html:17
-msgid "Titre"
 msgstr ""
 
 #: app/templates/livres.html:18
