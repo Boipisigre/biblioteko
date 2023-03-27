@@ -47,6 +47,17 @@ def livres():
 	lesnotes=get_notes("*")
 	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
+@app.route('/<int:post_id>/')
+def post(post_id):
+	post = get_post(post_id)
+	rows=[]
+	for ligne in post:
+		ligne = dict(ligne)
+		print(ligne)
+		rows.append(ligne)
+
+		return render_template('unlivre.html', post=rows[0])
+
 @app.route("/ajout")
 def addlivre():
 	return render_template('ajoutlivre.html')
@@ -127,3 +138,27 @@ def registeruser():
     add_user(nom, hashpwd)
     session['logged_in'] = False
     return render_template("index.html")
+
+@app.route('/redakti/<int:id>', methods=('GET', 'POST'))
+def redakti(id):
+	post = get_post(id)
+	if request.method == 'POST':
+		autoro = request.form['Autoro']
+		titolo = request.form['titolo']
+		enhavo = request.form['enhavo']
+		if not titolo:
+			flash('Un titre est obligatoire!')
+		else:
+			update_note(autoro, titolo, enhavo, id)
+
+			return livres()
+
+	return render_template('editer.html', post=post[0])
+
+@app.route('/<int:id>/forigi', methods=('POST',))
+def delete(id):
+    post = get_post(id)
+    delete_note(id)
+    flash('La note "{}" a été supprimée!'.format(post[0]['titre']))
+
+    return notes()

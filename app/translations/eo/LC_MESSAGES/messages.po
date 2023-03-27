@@ -88,7 +88,7 @@ msgstr "Enigu la informojn"
 
 #: app/templates/ajoutlivre.html:13
 msgid "Rubrique"
-msgstr "Rubrik"
+msgstr "Rubriko"
 
 #: app/templates/ajoutlivre.html:25 app/templates/livres.html:17
 msgid "Titre"
@@ -113,7 +113,7 @@ msgstr "Saluton"
 
 #: app/templates/index.html:10
 msgid "Vous pas connecté"
-msgstr ""
+msgstr "Vi ne estas ensalutinta"
 
 #: app/templates/index.html:13
 msgid "Bienvenue sur la bibliothèque de l association d Esperanto de Lausanne"
@@ -129,7 +129,7 @@ msgstr "Libroj"
 
 #: app/templates/livres.html:15
 msgid "Numéro"
-msgstr ""
+msgstr "Nombro"
 
 #: app/templates/livres.html:18
 msgid "Création"

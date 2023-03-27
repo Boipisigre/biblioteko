@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<h1 class="titre">{% block title %} Edition de la note "{{ post['ĉefŝlosilo'] }}" {% endblock %}</h1>
+<hr>
+<br>
+<form method="post">
+    <div class="form-group">
+      <label for="Autoro">Auteur</label>
+      <input type="text" name="Autoro" placeholder="Auteur" size="25"
+             class="form-control" required
+             value="{{ request.form['Autoro'] or post['Autoro'] }}">
+      </input>
+        <label for="titolo">Titre</label>
+        <input type="text" name="titolo" placeholder="Afisôn titolo" size="25"
+               class="form-control" required
+               value="{{ request.form['titre'] or post['Titolo'] }}">
+        </input>
+    </div>
+<hr>
+    <div class="form-group">
+        <label for="envaho">Edition</label><br>
+        <textarea name="enhavo" placeholder="Votre texte" rows="20" cols="100"
+                  class="form-control"> {{ request.form['corps'] or post['Eldono'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">modifier</button>
+    </div>
+</form>
+<hr>
+</body>
+{% endblock %}

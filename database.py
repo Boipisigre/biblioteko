@@ -76,7 +76,7 @@ def add_user(nom,mdp):
 
 def get_post(post_id):
     conn = get_db_connection()
-    post = conn.execute('SELECT * FROM notes WHERE id = ?',
+    post = conn.execute('SELECT * FROM libroj WHERE ĉefŝlosilo = ?',
                         (post_id,)).fetchall()
     conn.close()
     # print(post)
@@ -90,9 +90,9 @@ def get_user(nom):
     conn.close()
     return mdp
 
-def update_note(titolo, enhavo, id):
+def update_note(autoro, titolo, enhavo, id):
     conn = get_db_connection()
-    conn.execute('UPDATE notes SET titre = ?, corps = ?, modif=date()'
-                 ' WHERE id = ?', (titolo, enhavo, id))
+    conn.execute('UPDATE libroj SET titolo = ?, autoro = ?, Eldono=? '
+                 ' WHERE ĉefŝlosilo = ?', (titolo, autoro, enhavo, id))
     conn.commit()
     conn.close()

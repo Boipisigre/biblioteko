@@ -24,7 +24,7 @@
         {% for post in posts %}
                   <tr>
                     <td></td>
-            <td data-label="Numéro"> {{post['ĉefŝlosilo']}} </td>
+            <td data-label="Numéro"> <a href="{{ url_for('post', post_id=post['ĉefŝlosilo'])}}">{{post['ĉefŝlosilo']}} </td>
             <td data-label="Auteur">{{post['Autoro']}}</td>
             <td data-label="Titre">{{ post['titolo'] }}</td>
             <td data-label="Création">{{ post['Eldono'] }}</td>
