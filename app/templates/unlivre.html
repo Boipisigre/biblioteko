@@ -17,7 +17,7 @@
                   <th>{{ _('Numéro') }}</th>
                   <th>{{ _('Auteur') }}</th>
                   <th>{{ _('Titre') }}</th>
-                  <th>{{ _('Création') }}</th>
+                  <th>{{ _('Editeur') }}</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -29,13 +29,14 @@
             <td data-label="Numéro">{{post['ĉefŝlosilo']}} </td>
             <td data-label="Nom Créateur">{{post['Autoro']}}</td>
             <td data-label="Titre">{{ post['Titolo'] }}</td>
-            <td data-label="Création">{{ post['Eldono'] }}</td>
+            <td data-label="Editeur">{{ post['Eldono'] }}</td>
 
-            {% if auteur == post['nomcreateur'] %}
+            {% if session['logged_in'] %}
 
             <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> Editer</a> </td>
+            <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> Réserver</a> </td>
             <td><form action="{{ url_for('delete', id=post['ĉefŝlosilo']) }}" method="POST">
-                <input type="submit" value="Supprimer la note"
+                <input type="submit" value="Supprimer"
                         class="btn btn-danger btn-sm"
                         onclick="return confirm('Ĉu vi certas, ke vi volas forigi ĉi tiun afiŝon?')">
             </form>

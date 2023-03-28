@@ -155,10 +155,17 @@ def redakti(id):
 
 	return render_template('editer.html', post=post[0])
 
-@app.route('/<int:id>/forigi', methods=('POST',))
+@app.route('/forigi/<int:id>', methods=('POST',''))
 def delete(id):
     post = get_post(id)
-    delete_note(id)
-    flash('La note "{}" a été supprimée!'.format(post[0]['titre']))
+    delete_livre(id)
+    flash('Le livre"{}" a été supprimée!'.format(post[0]['Titolo']))
 
-    return notes()
+    return livres()
+
+@app.route('/rezervu/<int:id>')
+def reservu(id):
+	post = get_post(id)
+	rezervu_libro(id,session['user_name'])
+	flash('Le livre "{}" a été réservé!'.format(post[0]['Titolo']))
+	return livres()

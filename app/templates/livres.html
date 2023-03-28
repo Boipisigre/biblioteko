@@ -15,7 +15,7 @@
                   <th>{{ _('Numéro') }}</th>
                   <th>{{ _('Auteur') }}</th>
                   <th>{{ _('Titre') }}</th>
-                  <th>{{ _('Création') }}</th>
+                  <th>{{ _('Editeur') }}</th>
                   <th></th>
                 </tr>
                 </thead>
@@ -27,7 +27,7 @@
             <td data-label="Numéro"> <a href="{{ url_for('post', post_id=post['ĉefŝlosilo'])}}">{{post['ĉefŝlosilo']}} </td>
             <td data-label="Auteur">{{post['Autoro']}}</td>
             <td data-label="Titre">{{ post['titolo'] }}</td>
-            <td data-label="Création">{{ post['Eldono'] }}</td>
+            <td data-label="Editeur">{{ post['Eldono'] }}</td>
             <td> </td>
 
           </tr>

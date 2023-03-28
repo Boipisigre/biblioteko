@@ -62,6 +62,12 @@ def add_notes(col1,col2,col3,col4,col5):
     DBCon.close()
     return
 
+def rezervu_libro(id,nomo):
+    conn = get_db_connection()
+    conn.execute('UPDATE libroj SET Posedanto = ?, ŝanĝi = date() WHERE ĉefŝlosilo = ?', (nomo, id))
+    conn.commit()
+    conn.close()
+
 def add_user(nom,mdp):
     DBCon = get_db_connection()
     # print("=================================")
@@ -94,5 +100,11 @@ def update_note(autoro, titolo, enhavo, id):
     conn = get_db_connection()
     conn.execute('UPDATE libroj SET titolo = ?, autoro = ?, Eldono=? '
                  ' WHERE ĉefŝlosilo = ?', (titolo, autoro, enhavo, id))
+    conn.commit()
+    conn.close()
+
+def delete_livre(id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM libroj WHERE ĉefŝlosilo = ?', (id,))
     conn.commit()
     conn.close()
