@@ -32,15 +32,16 @@
             <td data-label="Editeur">{{ post['Eldono'] }}</td>
 
             {% if session['logged_in'] %}
-
-            <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> Editer</a> </td>
             <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> Réserver</a> </td>
+             {% if session['user_name'] == 'andre' %}
+            <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> Editer</a> </td>
             <td><form action="{{ url_for('delete', id=post['ĉefŝlosilo']) }}" method="POST">
                 <input type="submit" value="Supprimer"
                         class="btn btn-danger btn-sm"
                         onclick="return confirm('Ĉu vi certas, ke vi volas forigi ĉi tiun afiŝon?')">
             </form>
             </td>
+            {% endif %}
           {% endif %}
           </tr>
 

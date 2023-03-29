@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-24 10:17+0100\n"
+"POT-Creation-Date: 2023-03-29 17:06+0200\n"
 "PO-Revision-Date: 2023-03-13 11:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "E-mail address"
 msgstr ""
 
-#: app/templates/about.html:4 app/templates/menu.html:76
+#: app/templates/about.html:4 app/templates/menu.html:80
 msgid "Au sujet"
 msgstr ""
 
@@ -43,38 +43,34 @@ msgid "Editer un livre"
 msgstr ""
 
 #: app/templates/about.html:16
-msgid "Suprimer un livre"
-msgstr ""
-
-#: app/templates/about.html:17
 msgid "Ajout de livre"
 msgstr ""
 
-#: app/templates/about.html:18
+#: app/templates/about.html:17
 msgid "Rechercher des livres"
 msgstr ""
 
-#: app/templates/about.html:20 app/templates/menu.html:36
+#: app/templates/about.html:19 app/templates/menu.html:40
 msgid "par Titre"
 msgstr ""
 
-#: app/templates/about.html:21
+#: app/templates/about.html:20 app/templates/menu.html:41
 msgid "par Auteur"
 msgstr ""
 
-#: app/templates/about.html:24
+#: app/templates/about.html:23
 msgid "Connection utilisateur"
 msgstr ""
 
-#: app/templates/about.html:25
+#: app/templates/about.html:24
 msgid "Deconnection"
 msgstr ""
 
-#: app/templates/about.html:26
+#: app/templates/about.html:25
 msgid "Enregistrer un utilisateur"
 msgstr ""
 
-#: app/templates/about.html:27
+#: app/templates/about.html:26
 msgid "Explication"
 msgstr ""
 
@@ -91,15 +87,17 @@ msgid "Rubrique"
 msgstr ""
 
 #: app/templates/ajoutlivre.html:25 app/templates/livres.html:17
+#: app/templates/unlivre.html:19
 msgid "Titre"
 msgstr ""
 
 #: app/templates/ajoutlivre.html:32 app/templates/footer.html:4
-#: app/templates/livres.html:16
+#: app/templates/livres.html:16 app/templates/unlivre.html:18
 msgid "Auteur"
 msgstr ""
 
-#: app/templates/ajoutlivre.html:37
+#: app/templates/ajoutlivre.html:37 app/templates/livres.html:18
+#: app/templates/unlivre.html:20
 msgid "Editeur"
 msgstr ""
 
@@ -108,15 +106,17 @@ msgid "Sauver"
 msgstr ""
 
 #: app/templates/index.html:6
-msgid "Bonjour"
+#, fuzzy
+msgid "Bonjour, "
 msgstr "Hello"
 
 #: app/templates/index.html:10
-msgid "Vous pas connecté"
+msgid "vous n'êtes pas connecté"
 msgstr ""
 
 #: app/templates/index.html:13
-msgid "Bienvenue sur la bibliothèque de l association d Esperanto de Lausanne"
+#, fuzzy
+msgid "Bienvenue sur la bibliothèque de l'association d'Esperanto de Lausanne"
 msgstr "Welcome on the library of Esperanto association"
 
 #: app/templates/livres.html:5
@@ -127,16 +127,12 @@ msgstr ""
 msgid "livres"
 msgstr ""
 
-#: app/templates/livres.html:15
+#: app/templates/livres.html:15 app/templates/unlivre.html:17
 msgid "Numéro"
 msgstr ""
 
-#: app/templates/livres.html:18
-msgid "Création"
-msgstr ""
-
-#: app/templates/login.html:8 app/templates/menu.html:48
-#: app/templates/menu.html:52
+#: app/templates/login.html:8 app/templates/menu.html:52
+#: app/templates/menu.html:56
 msgid "Connection"
 msgstr ""
 
@@ -168,32 +164,32 @@ msgstr ""
 msgid "Lister"
 msgstr ""
 
-#: app/templates/menu.html:27 app/templates/menu.html:29
+#: app/templates/menu.html:27 app/templates/menu.html:32
+msgid "Disponible"
+msgstr ""
+
+#: app/templates/menu.html:29 app/templates/menu.html:33
 msgid "Ajouter"
 msgstr ""
 
-#: app/templates/menu.html:33
+#: app/templates/menu.html:37
 msgid "Recherche"
 msgstr ""
 
-#: app/templates/menu.html:37
-msgid "par Créateur"
-msgstr ""
-
-#: app/templates/menu.html:44
+#: app/templates/menu.html:48
 msgid "Gestion connexion"
 msgstr ""
 
-#: app/templates/menu.html:49 app/templates/menu.html:53
+#: app/templates/menu.html:53 app/templates/menu.html:57
 msgid "De-connection"
 msgstr ""
 
-#: app/templates/menu.html:50 app/templates/menu.html:54
+#: app/templates/menu.html:54 app/templates/menu.html:58
 #: app/templates/register.html:5
 msgid "Enregistrement"
 msgstr ""
 
-#: app/templates/menu.html:64
+#: app/templates/menu.html:68
 msgid "Changer de langue"
 msgstr ""
 
@@ -234,5 +230,17 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Mot de Passe"
+#~ msgstr ""
+
+#~ msgid "Suprimer un livre"
+#~ msgstr ""
+
+#~ msgid "Création"
+#~ msgstr ""
+
+#~ msgid "par Créateur"
+#~ msgstr ""
+
+#~ msgid "Vous pas connecté"
 #~ msgstr ""
 

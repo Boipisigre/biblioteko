@@ -2,8 +2,8 @@
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
    <div class="navbar-brand">
-     <a class="navbar-item" href="https://boizot.ch">
-       <img src="https://boizot.ch/img/pierre.jpg" width="28" height="28">
+     <a class="navbar-item" href="http://esperanto-lausanne.ch/">
+       <img src="{{url_for('static', filename='Lauzana-esperanto.png')}}">
      </a>
 
      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -24,10 +24,14 @@
      <a class="navbar-item" href="{{url_for('livres')}}">{{ _('Lister') }}</a>
 
      {% if session['logged_in'] %}
-     <a class="navbar-item" href="{{url_for('addlivre')}}">{{ _('Ajouter') }}</a>
+        <a class="navbar-item" href="{{url_for('livresdispo')}}">{{ _('Disponible') }}</a>
+        {% if session['user_name'] == 'andre' %}
+          <a class="navbar-item" href="{{url_for('addlivre')}}">{{ _('Ajouter') }}</a>
+          {% endif %}
      {% else %}
-      <a class="navbar-item" href="#">{{ _('Ajouter') }}</a>
-      {% endif %}
+        <a class="navbar-item" href="#">{{ _('Disponible') }}</a>
+        <a class="navbar-item" href="#">{{ _('Ajouter') }}</a>
+     {% endif %}
 
   <div class="navbar-item has-dropdown is-hoverable">
     <a class="navbar-link"> {{ _('Recherche')}}  </a>

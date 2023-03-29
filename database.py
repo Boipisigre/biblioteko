@@ -28,6 +28,27 @@ def get_notes(filtre):
     # print("=================================")
     return  notes
 
+
+def get_livres(filtre):
+    DBCon = get_db_connection()
+
+    # print("=================================")
+    # Ouvrir un curseur
+    ltable = DBCon.cursor()
+    # print(filtre)
+    if filtre == "*":
+        notes = ltable.execute("select * from libroj where length(Posedanto) == 0").fetchall()
+    else:
+        filtre="%"+filtre.upper()+"%"
+        # print(filtre)
+        notes = ltable.execute("select * from libroj where length(Posedanto) == 0 and upper(titolo) like ?",[filtre,]).fetchall()# print(notes)
+        # print(notes)
+
+    ltable.close()
+    DBCon.close()
+    # print("=================================")
+    return  notes
+
 def get_notes_user(filtre):
     DBCon = get_db_connection()
 
