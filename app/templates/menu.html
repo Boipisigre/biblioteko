@@ -28,9 +28,7 @@
         {% if session['user_name'] == 'andre' %}
           <a class="navbar-item" href="{{url_for('addlivre')}}">{{ _('Ajouter') }}</a>
           {% endif %}
-     {% else %}
-        <a class="navbar-item" href="#">{{ _('Disponible') }}</a>
-        <a class="navbar-item" href="#">{{ _('Ajouter') }}</a>
+
      {% endif %}
 
   <div class="navbar-item has-dropdown is-hoverable">
