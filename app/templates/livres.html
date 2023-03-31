@@ -24,10 +24,10 @@
         {% for post in posts %}
                   <tr>
                     <td></td>
-            <td data-label="Numéro"> <a href="{{ url_for('post', post_id=post['ĉefŝlosilo'])}}">{{post['ĉefŝlosilo']}} </td>
-            <td data-label="Auteur">{{post['Autoro']}}</td>
-            <td data-label="Titre">{{ post['titolo'] }}</td>
-            <td data-label="Editeur">{{ post['Eldono'] }}</td>
+                    <td data-label="{{ _('Numéro') }}"> <a href="{{ url_for('post', post_id=post['ĉefŝlosilo'])}}">{{post['ĉefŝlosilo']}} </td>
+                      <td data-label="{{ _('Auteur') }}">{{post['Autoro']}}</td>
+                      <td data-label="{{ _('Titre') }}">{{ post['Titolo'] }}</td>
+                      <td data-label="{{ _('Editeur') }}">{{ post['Eldono'] }}</td>
             <td> </td>
 
           </tr>

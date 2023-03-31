@@ -4,7 +4,7 @@ import sqlite3
 
 
 def get_db_connection():
-    conn = sqlite3.connect('app/static/db/biblioteko.db')
+    conn = sqlite3.connect('app/instance/biblioteko.db')
     conn.row_factory = sqlite3.Row
     return conn
 

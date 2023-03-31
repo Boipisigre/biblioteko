@@ -11,12 +11,14 @@
   <hr>
 
 <form onsubmit="save_data()" action="/registeruser" method="get">
-  <input type="text" id="message" name="username" required placeholder="Votre Nom"">
-  <input type="password" name="password" required placeholder="Mot de passe">
+  <input type="text" id="message" name="username" required placeholder={{ _('Votre_Nom') }}>
+  <input type="password" name="password" required placeholder={{ _('Mot_de_Passe') }}>
+  <input type="text" name="code" value={{ _("code de validation")}}>
   <input type="submit" value="Sauver">
 </form>
 
 </center>
 <hr>
+
 
 {% endblock %}

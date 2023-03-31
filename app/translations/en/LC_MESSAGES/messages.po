@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-29 17:06+0200\n"
+"POT-Creation-Date: 2023-03-31 16:06+0200\n"
 "PO-Revision-Date: 2023-03-13 11:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "E-mail address"
 msgstr ""
 
-#: app/templates/about.html:4 app/templates/menu.html:80
+#: app/templates/about.html:4 app/templates/menu.html:78
 msgid "Au sujet"
 msgstr ""
 
@@ -50,11 +50,11 @@ msgstr ""
 msgid "Rechercher des livres"
 msgstr ""
 
-#: app/templates/about.html:19 app/templates/menu.html:40
+#: app/templates/about.html:19 app/templates/menu.html:38
 msgid "par Titre"
 msgstr ""
 
-#: app/templates/about.html:20 app/templates/menu.html:41
+#: app/templates/about.html:20 app/templates/menu.html:39
 msgid "par Auteur"
 msgstr ""
 
@@ -87,17 +87,20 @@ msgid "Rubrique"
 msgstr ""
 
 #: app/templates/ajoutlivre.html:25 app/templates/livres.html:17
-#: app/templates/unlivre.html:19
+#: app/templates/livres.html:29 app/templates/unlivre.html:19
+#: app/templates/unlivre.html:31
 msgid "Titre"
 msgstr ""
 
 #: app/templates/ajoutlivre.html:32 app/templates/footer.html:4
-#: app/templates/livres.html:16 app/templates/unlivre.html:18
+#: app/templates/livres.html:16 app/templates/livres.html:28
+#: app/templates/unlivre.html:18 app/templates/unlivre.html:30
 msgid "Auteur"
 msgstr ""
 
 #: app/templates/ajoutlivre.html:37 app/templates/livres.html:18
-#: app/templates/unlivre.html:20
+#: app/templates/livres.html:30 app/templates/unlivre.html:20
+#: app/templates/unlivre.html:32
 msgid "Editeur"
 msgstr ""
 
@@ -127,12 +130,13 @@ msgstr ""
 msgid "livres"
 msgstr ""
 
-#: app/templates/livres.html:15 app/templates/unlivre.html:17
+#: app/templates/livres.html:15 app/templates/livres.html:27
+#: app/templates/unlivre.html:17 app/templates/unlivre.html:29
 msgid "Numéro"
 msgstr ""
 
-#: app/templates/login.html:8 app/templates/menu.html:52
-#: app/templates/menu.html:56
+#: app/templates/login.html:8 app/templates/menu.html:50
+#: app/templates/menu.html:54
 msgid "Connection"
 msgstr ""
 
@@ -140,11 +144,11 @@ msgstr ""
 msgid "Saisissez votre nom"
 msgstr ""
 
-#: app/templates/login.html:13
+#: app/templates/login.html:13 app/templates/register.html:14
 msgid "Votre_Nom"
 msgstr ""
 
-#: app/templates/login.html:15
+#: app/templates/login.html:15 app/templates/register.html:15
 msgid "Mot_de_Passe"
 msgstr ""
 
@@ -164,32 +168,32 @@ msgstr ""
 msgid "Lister"
 msgstr ""
 
-#: app/templates/menu.html:27 app/templates/menu.html:32
+#: app/templates/menu.html:27
 msgid "Disponible"
 msgstr ""
 
-#: app/templates/menu.html:29 app/templates/menu.html:33
+#: app/templates/menu.html:29
 msgid "Ajouter"
 msgstr ""
 
-#: app/templates/menu.html:37
+#: app/templates/menu.html:35
 msgid "Recherche"
 msgstr ""
 
-#: app/templates/menu.html:48
+#: app/templates/menu.html:46
 msgid "Gestion connexion"
 msgstr ""
 
-#: app/templates/menu.html:53 app/templates/menu.html:57
+#: app/templates/menu.html:51 app/templates/menu.html:55
 msgid "De-connection"
 msgstr ""
 
-#: app/templates/menu.html:54 app/templates/menu.html:58
+#: app/templates/menu.html:52 app/templates/menu.html:56
 #: app/templates/register.html:5
 msgid "Enregistrement"
 msgstr ""
 
-#: app/templates/menu.html:68
+#: app/templates/menu.html:66
 msgid "Changer de langue"
 msgstr ""
 
@@ -226,6 +230,34 @@ msgstr ""
 msgid "Saisissez votre nom et mot de passe"
 msgstr ""
 
+#: app/templates/register.html:16
+msgid "code de validation"
+msgstr ""
+
+#: app/templates/unlivre.html:6
+msgid "Voici le "
+msgstr ""
+
+#: app/templates/unlivre.html:6
+msgid "livre"
+msgstr ""
+
+#: app/templates/unlivre.html:35
+msgid "Réserver"
+msgstr ""
+
+#: app/templates/unlivre.html:37
+msgid "Editer"
+msgstr ""
+
+#: app/templates/unlivre.html:39
+msgid "Supprimer"
+msgstr ""
+
+#: app/templates/unlivre.html:41
+msgid "Etes-vous sûr de vouloir supprimer ce livre?"
+msgstr ""
+
 #~ msgid "Votre Nom"
 #~ msgstr ""
 
@@ -242,5 +274,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Vous pas connecté"
+#~ msgstr ""
+
+#~ msgid "Voici le "
+#~ msgstr ""
+
+#~ msgid "livre"
 #~ msgstr ""
 

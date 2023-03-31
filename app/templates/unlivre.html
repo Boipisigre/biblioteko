@@ -3,7 +3,7 @@
 {% block content %}
 <body>
 
-<h1 class='title'> Voici le {% block title %} livre {{post['ĉefŝlosilo']}} {% endblock %}</h1>
+<h1 class='title'> {{ _('Voici le ') }} {% block title %} {{ _('livre') }} {{post['ĉefŝlosilo']}} {% endblock %}</h1>
 
 <hr>
 <section class="section">
@@ -26,19 +26,19 @@
 
             <tr>
             <td></td>
-            <td data-label="Numéro">{{post['ĉefŝlosilo']}} </td>
-            <td data-label="Nom Créateur">{{post['Autoro']}}</td>
-            <td data-label="Titre">{{ post['Titolo'] }}</td>
-            <td data-label="Editeur">{{ post['Eldono'] }}</td>
+            <td data-label="{{ _('Numéro') }}">{{post['ĉefŝlosilo']}} </td>
+            <td data-label="{{ _('Auteur') }}">{{post['Autoro']}}</td>
+            <td data-label="{{ _('Titre') }}">{{ post['Titolo'] }}</td>
+            <td data-label="{{ _('Editeur') }}">{{ post['Eldono'] }}</td>
 
             {% if session['logged_in'] %}
-            <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> Réserver</a> </td>
+            <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> {{ _('Réserver') }}</a> </td>
              {% if session['user_name'] == 'andre' %}
-            <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> Editer</a> </td>
+            <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> {{ _('Editer') }}</a> </td>
             <td><form action="{{ url_for('delete', id=post['ĉefŝlosilo']) }}" method="POST">
-                <input type="submit" value="Supprimer"
+                <input type="submit" value={{ _('Supprimer') }}
                         class="btn btn-danger btn-sm"
-                        onclick="return confirm('Ĉu vi certas, ke vi volas forigi ĉi tiun afiŝon?')">
+                        onclick="return confirm({{ _('Etes-vous sûr de vouloir supprimer ce livre?') }}')">
             </form>
             </td>
             {% endif %}

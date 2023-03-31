@@ -136,13 +136,15 @@ def logout():
 
 @app.route('/registeruser', methods=['POST',"GET"])
 def registeruser():
+	code=request.args.get("code")
+	if code=="Esperanto-2023" :
+		nom=request.args.get("username")
+		pwd=request.args.get("password")
+		hashpwd=generate_password_hash(pwd)
+		add_user(nom, hashpwd)
 
-    nom=request.args.get("username")
-    pwd=request.args.get("password")
-    hashpwd=generate_password_hash(pwd)
-    add_user(nom, hashpwd)
-    session['logged_in'] = False
-    return render_template("index.html")
+	session['logged_in'] = False
+	return render_template("index.html")
 
 @app.route('/redakti/<int:id>', methods=('GET', 'POST'))
 def redakti(id):
