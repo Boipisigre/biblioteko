@@ -37,11 +37,11 @@ def get_livres(filtre):
     ltable = DBCon.cursor()
     # print(filtre)
     if filtre == "*":
-        notes = ltable.execute("select * from libroj where length(Posedanto) == 0").fetchall()
+        notes = ltable.execute("select * from libroj where length(pretaal) is null").fetchall()
     else:
         filtre="%"+filtre.upper()+"%"
         # print(filtre)
-        notes = ltable.execute("select * from libroj where length(Posedanto) == 0 and upper(titolo) like ?",[filtre,]).fetchall()# print(notes)
+        notes = ltable.execute("select * from libroj where length(pretaal) is null and upper(titolo) like ?",[filtre,]).fetchall()# print(notes)
         # print(notes)
 
     ltable.close()
@@ -85,7 +85,7 @@ def add_notes(col1,col2,col3,col4,col5):
 
 def rezervu_libro(id,nomo):
     conn = get_db_connection()
-    conn.execute('UPDATE libroj SET Posedanto = ?, ŝanĝi = date() WHERE ĉefŝlosilo = ?', (nomo, id))
+    conn.execute('UPDATE libroj SET pretaal = ?, ŝanĝi = date() WHERE ĉefŝlosilo = ?', (nomo, id))
     conn.commit()
     conn.close()
 
