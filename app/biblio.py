@@ -52,6 +52,12 @@ def livresdispo():
 	lesnotes=get_livres("*")
 	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
+# livrespret
+@app.route("/livrespret")
+def livrespret():
+	lesnotes=get_livresprete("*")
+	return render_template('prete.html', posts=lesnotes, nombre=len(lesnotes))
+
 @app.route('/<int:post_id>/')
 def post(post_id):
 	post = get_post(post_id)
