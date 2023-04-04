@@ -32,7 +32,9 @@
             <td data-label="{{ _('Editeur') }}">{{ post['Eldono'] }}</td>
 
             {% if session['logged_in'] %}
-            <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> {{ _('Réserver') }}</a> </td>
+              {% if session['reserver'] %}
+                <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> {{ _('Réserver') }}</a> </td>
+              {% endif %}
              {% if session['user_name'] == 'andre' %}
             <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> {{ _('Editer') }}</a> </td>
             <td><form action="{{ url_for('delete', id=post['ĉefŝlosilo']) }}" method="POST">

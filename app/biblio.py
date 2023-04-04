@@ -45,17 +45,20 @@ def about():
 @app.route("/livres")
 def livres():
 	lesnotes=get_notes("*")
+	session['reserver'] = False
 	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/livresdispo")
 def livresdispo():
 	lesnotes=get_livres("*")
+	session['reserver'] = True
 	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 # livrespret
 @app.route("/livrespret")
 def livrespret():
 	lesnotes=get_livresprete("*")
+	session['reserver'] = False
 	return render_template('prete.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route('/<int:post_id>/')
