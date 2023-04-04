@@ -107,7 +107,7 @@ def add_notes(col1,col2,col3,col4,col5):
 
 def rezervu_libro(id,nomo):
     conn = get_db_connection()
-    conn.execute('UPDATE libroj SET pretaal = ?, ŝanĝi = date() WHERE ĉefŝlosilo = ?', (nomo, id))
+    conn.execute('UPDATE libroj SET pretaal = ?, datepret = date() WHERE ĉefŝlosilo = ?', (nomo, id))
     conn.commit()
     conn.close()
 
