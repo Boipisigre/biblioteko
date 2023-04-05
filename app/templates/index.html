@@ -7,6 +7,9 @@
           {% if session['logged_in'] %}
           {{session['user_name']}}
         {% else%}
+          {% if message %}
+              <b> {{message}} </b> <br>
+          {% endif %}
           {{ _('vous n\'êtes pas connecté') }}
         {% endif %} </h2>
         <hr>

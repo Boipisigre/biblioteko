@@ -36,7 +36,8 @@ def set_language(language=None):
 
 @app.route('/')
 def homepage():
-	return render_template('index.html')
+	message = ""
+	return render_template('index.html', message=message)
 
 @app.route("/about")
 def about():
@@ -121,15 +122,15 @@ def do_admin_login():
     pwd=get_user(nom)
     session['logged_in'] = False
     if pwd is None :
-        flash('Utilisateur inconnu!')
+        message='Utilisateur inconnu!'
     else:
         if check_password_hash(pwd[0], request.args.get("password")):
             session['logged_in'] = True
             session['user_name'] = nom
         else:
-            flash('Mot de passe éroné!')
+            message='Mot de passe éroné!'
 
-    return render_template("index.html")
+    return render_template("index.html", message=message)
 
 @app.route('/register', methods=['POST',"GET"])
 @app.route("/enregistre", methods=['POST',"GET"])
@@ -150,10 +151,15 @@ def registeruser():
 		nom=request.args.get("username")
 		pwd=request.args.get("password")
 		hashpwd=generate_password_hash(pwd)
-		add_user(nom, hashpwd)
+		user=get_user(nom)
+		if user :
+			message='Utilisateur déjà éxistant'
+		else:
+			add_user(nom, hashpwd)
+			message='Création Utilisateur OK'
 
 	session['logged_in'] = False
-	return render_template("index.html")
+	return render_template("index.html", message=message)
 
 @app.route('/redakti/<int:id>', methods=('GET', 'POST'))
 def redakti(id):
