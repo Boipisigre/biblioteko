@@ -2,7 +2,7 @@ from flask import render_template, redirect, request, session, url_for, flash
 from werkzeug.exceptions import abort
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.forms import EmailForm
-from flask_babel import Babel
+from flask_babel import Babel, lazy_gettext
 from app import app, babel
 from database import *
 
@@ -118,19 +118,20 @@ def login():
 
 @app.route('/login', methods=['POST',"GET"])
 def do_admin_login():
-    nom=request.args.get("username")
-    pwd=get_user(nom)
-    session['logged_in'] = False
-    if pwd is None :
-        message='Utilisateur inconnu!'
-    else:
-        if check_password_hash(pwd[0], request.args.get("password")):
-            session['logged_in'] = True
-            session['user_name'] = nom
-        else:
-            message='Mot de passe éroné!'
 
-    return render_template("index.html", message=message)
+	message = ""
+	nom=request.args.get("username")
+	pwd=get_user(nom)
+	session['logged_in'] = False
+	if pwd is None: message=lazy_gettext('Utilisateur inconnu!')
+	else:
+		if check_password_hash(pwd[0], request.args.get("password")):
+			session['logged_in'] = True
+			session['user_name'] = nom
+		else:
+			message=lazy_gettext('Mot de passe éroné!')
+			
+	return render_template("index.html", message=message)
 
 @app.route('/register', methods=['POST',"GET"])
 @app.route("/enregistre", methods=['POST',"GET"])
@@ -146,6 +147,7 @@ def logout():
 
 @app.route('/registeruser', methods=['POST',"GET"])
 def registeruser():
+	message = ' '
 	code=request.args.get("code")
 	if code=="Esperanto-2023" :
 		nom=request.args.get("username")
@@ -153,10 +155,12 @@ def registeruser():
 		hashpwd=generate_password_hash(pwd)
 		user=get_user(nom)
 		if user :
-			message='Utilisateur déjà éxistant'
+			message=lazy_gettext('Utilisateur déjà éxistant')
 		else:
 			add_user(nom, hashpwd)
-			message='Création Utilisateur OK'
+			message=lazy_gettext('Création Utilisateur OK')
+	else:
+		message=lazy_gettext('Veuillez saisir le code')
 
 	session['logged_in'] = False
 	return render_template("index.html", message=message)
@@ -168,12 +172,8 @@ def redakti(id):
 		autoro = request.form['Autoro']
 		titolo = request.form['titolo']
 		enhavo = request.form['enhavo']
-		if not titolo:
-			flash('Un titre est obligatoire!')
-		else:
-			update_note(autoro, titolo, enhavo, id)
-
-			return livres()
+		update_note(autoro, titolo, enhavo, id)
+		return livres()
 
 	return render_template('editer.html', post=post[0])
 

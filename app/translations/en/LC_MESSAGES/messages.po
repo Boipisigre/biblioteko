@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-04 15:15+0200\n"
+"POT-Creation-Date: 2023-04-06 15:29+0200\n"
 "PO-Revision-Date: 2023-03-13 11:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -17,6 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
+
+#: app/biblio.py:126
+msgid "Utilisateur inconnu!"
+msgstr ""
+
+#: app/biblio.py:132
+msgid "Mot de passe éroné!"
+msgstr ""
+
+#: app/biblio.py:158
+msgid "Utilisateur déjà éxistant"
+msgstr ""
+
+#: app/biblio.py:161
+msgid "Création Utilisateur OK"
+msgstr ""
+
+#: app/biblio.py:163
+msgid "Veuillez saisir le code"
+msgstr ""
 
 #: app/forms.py:6
 msgid "E-mail address"
@@ -109,16 +129,20 @@ msgstr ""
 msgid "Sauver"
 msgstr ""
 
+#: app/templates/editer.html:28
+msgid "Modifier"
+msgstr ""
+
 #: app/templates/index.html:6
 #, fuzzy
 msgid "Bonjour, "
 msgstr "Hello"
 
-#: app/templates/index.html:10
+#: app/templates/index.html:13
 msgid "vous n'êtes pas connecté"
 msgstr ""
 
-#: app/templates/index.html:13
+#: app/templates/index.html:16
 #, fuzzy
 msgid "Bienvenue sur la bibliothèque de l'association d'Esperanto de Lausanne"
 msgstr "Welcome on the library of Esperanto association"
@@ -256,19 +280,19 @@ msgstr ""
 msgid "livre"
 msgstr ""
 
-#: app/templates/unlivre.html:35
+#: app/templates/unlivre.html:36
 msgid "Réserver"
 msgstr ""
 
-#: app/templates/unlivre.html:37
+#: app/templates/unlivre.html:39
 msgid "Editer"
 msgstr ""
 
-#: app/templates/unlivre.html:39
+#: app/templates/unlivre.html:41
 msgid "Supprimer"
 msgstr ""
 
-#: app/templates/unlivre.html:41
+#: app/templates/unlivre.html:43
 msgid "Etes-vous sûr de vouloir supprimer ce livre?"
 msgstr ""
 
@@ -303,5 +327,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "code de validation"
+#~ msgstr ""
+
+#~ msgid "Veuillez saidir le code"
 #~ msgstr ""
 

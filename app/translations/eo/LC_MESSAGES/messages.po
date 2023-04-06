@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-04 15:15+0200\n"
+"POT-Creation-Date: 2023-04-06 15:29+0200\n"
 "PO-Revision-Date: 2023-03-08 16:54+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: eo\n"
@@ -17,6 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
+
+#: app/biblio.py:126
+msgid "Utilisateur inconnu!"
+msgstr "Nekonata uzanto!"
+
+#: app/biblio.py:132
+msgid "Mot de passe éroné!"
+msgstr "Erara pasvorto!"
+
+#: app/biblio.py:158
+msgid "Utilisateur déjà éxistant"
+msgstr "Jam ekzistanta uzantnomo"
+
+#: app/biblio.py:161
+msgid "Création Utilisateur OK"
+msgstr "Uzanto-Kreado bone "
+
+#: app/biblio.py:163
+msgid "Veuillez saisir le code"
+msgstr "Bonvolu enigi la kodon"
 
 #: app/forms.py:6
 msgid "E-mail address"
@@ -109,15 +129,19 @@ msgstr "Eldono"
 msgid "Sauver"
 msgstr "Savi"
 
+#: app/templates/editer.html:28
+msgid "Modifier"
+msgstr ""
+
 #: app/templates/index.html:6
 msgid "Bonjour, "
 msgstr "Saluton"
 
-#: app/templates/index.html:10
+#: app/templates/index.html:13
 msgid "vous n'êtes pas connecté"
 msgstr "vi ne estas ensalutinta"
 
-#: app/templates/index.html:13
+#: app/templates/index.html:16
 msgid "Bienvenue sur la bibliothèque de l'association d'Esperanto de Lausanne"
 msgstr "Bonvenon en la biblioteko de la Lozana-asocio de Esperanto"
 
@@ -255,19 +279,19 @@ msgstr "Jen la"
 msgid "livre"
 msgstr "Librojn"
 
-#: app/templates/unlivre.html:35
+#: app/templates/unlivre.html:36
 msgid "Réserver"
 msgstr "Rezervi"
 
-#: app/templates/unlivre.html:37
+#: app/templates/unlivre.html:39
 msgid "Editer"
 msgstr "Eldoni"
 
-#: app/templates/unlivre.html:39
+#: app/templates/unlivre.html:41
 msgid "Supprimer"
 msgstr "Forigi"
 
-#: app/templates/unlivre.html:41
+#: app/templates/unlivre.html:43
 msgid "Etes-vous sûr de vouloir supprimer ce livre?"
 msgstr "Ĉu vi certas, ke vi volas forigi ĉi tiun libron?"
 
@@ -297,3 +321,7 @@ msgstr "Ĉu vi certas, ke vi volas forigi ĉi tiun libron?"
 
 #~ msgid "code de validation"
 #~ msgstr "Validakodo"
+
+#~ msgid "Veuillez saidir le code"
+#~ msgstr ""
+
