@@ -1,32 +1,150 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class='title'>{% block title %} {{ _('Au sujet') }} {% endblock %} {{ _('de l"application bibliotheque') }}.</h1>
-  <hr>
-<br/>
+<h1 class='title' style="text-align: center;">{% block title %} {{ _('Au sujet') }} {% endblock %} {{ _('de l"application bibliotheque') }}.</h1>
 
-<div class="container">
+<h2 class='subtitle' style="text-align: center;">de l'association d'Esperanto de Lausanne<br></h2>
 
-<h2 class="subtitle is-2"> {{ _('Quelles fonctionnalités?') }} </h2>
+<h4 class='title is-4'>Qui peut l'utiliser?<br></h4><p>Le site est utilisable par tous, mais seules les personnes ayant ouvert un compte et étant&nbsp;connectées peuvent voir les livres disponibles, déjà prêtés et en réserver.<br></p><br>
 
-<ol type="1">
-  <li> {{ _('Lister les livres') }} </li>
-  <ol type="1">
-    <li> {{ _('Editer un livre') }} </li>
-  <li> {{ _('Ajout de livre') }} </li>
-  <li> {{ _('Rechercher des livres') }} </li>
-  <ol type="A">
-    <li> {{ _('par Titre') }} </li>
-    <li> {{ _('par Auteur') }}</li>
-  </ol>
+<h4 class='title is-4'> Statut de l'utilisateur<br></h4><p>Les actions possibles changent en fonction du statut de l'utilisateur.<br></p><br>
 
-  <li> {{ _('Connection utilisateur') }}  </li>
-  <li> {{ _('Deconnection') }} </li>
-  <li>  {{ _('Enregistrer un utilisateur') }} </li>
-  <li>  {{ _('Explication') }}</li>
 
-</ol>
+<div class="columns is-mobile">
+  <div class="column">
+    <strong> Status Connection</strong>
+  </div>
+  <div class="column">
+    <strong> Lister les livres</strong>
+  </div>
+  <div class="column">
+    <strong>lister les disponibles</strong>
+  </div>
+  <div class="column">
+    <strong>lister les non disponibles</strong>
+  </div>
+   <div class="column">
+    <strong>réserver</strong>
+  </div>
+  <div>
+    <strong> Ajouter</strong>
+ </div>
+  <div class="column">
+    <strong>Chercher Titre, Auteur</strong>
+  </div>
+  <div class="column">
+  <strong>s'enregister</strong>
+  </div>
+  <div class="column">
+  <strong> Connecter </strong>
+  </div>
+  <div class="column">
+  <strong> De-Connecter </strong>
+  </div>
+    </div>
+<div class="columns is-mobile">
+  <div class="column">
+    <strong>Non Connecté</strong>
+  </div>
+  <div class="column">
+    Oui
+  </div>
+  <div class="column">
+    Non
+  </div>
+<div class="column">
+  Non
 </div>
+<div class="column">
+  Non
+</div><div class="column">
+  Non
+</div>
+<div class="column">
+    Oui
+  </div>
+  <div class="column">
+    oui
+  </div>
+  <div class="column">
+    Oui
+  </div>
+<div class="column">
+  Non
+</div>
+</div>
+<div class="columns is-mobile">
+  <div class="column">
+    <strong>Connecté</strong>
+  </div>
+  <div class="column">
+    Oui
+  </div>
+  <div class="column">
+    Oui
+  </div>
+<div class="column">
+  Oui
+</div>
+<div class="column">
+Oui
+</div>
+<div class="column">
+  Non
+</div>
+<div class="column">
+    Oui
+  </div>
+  <div class="column">
+    Non
+  </div>
+  <div class="column">
+    Non
+  </div>
+  <div class="column">
+      Oui
+    </div>
+</div>
+<div class="columns is-mobile">
+  <div class="column">
+    <strong>Connecté Admin</strong>
+  </div>
+  <div class="column">
+    Oui
+  </div>
+  <div class="column">
+    Oui
+  </div>
+<div class="column">
+  Oui
+</div>
+<div class="column">
+  Oui
+</div>
+<div class="column">
+  Oui
+</div>
+<div class="column">
+    Oui
+  </div>
+  <div class="column">
+    Non
+  </div>
+  <div class="column">
+    Non
+  </div>
+  <div class="column">
+      Oui
+    </div>
+</div>
+
+<p>Tous les utilisateurs pourront voir la description d'un livre  en sélectionnant le numéro du livre.<br></p>
+<br>
+<h4 class='title is-4' >Les langues</h4>
+<p>Le site est en deux langues Français et Esperanto,<br></p><p>Tous les utilisateurs peuvent changer de langues. le changement de langue fait revenir à l'accueil.<br></p>
+<br><h4 class='title is-4'>La connexion<br></h4><p>Il faut s'enregistrer, le nom d'utilisateur est unique <br></p>
+<br><h4 class='title is-4'>Futur<br></h4><p>Les fonction futures permettront <br></p><ul><li>d'ajouter une description dans la langue du livre.<br></li><li>de gérer l'envoi d'un e-mail au bibliothécaire pour l'informer du réservation.<br></li><li>de rendre disponible un livre retourné.<br></li></ul>
+
 
 <hr>
 
