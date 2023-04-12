@@ -35,7 +35,8 @@
               {% if session['reserver'] %}
                 <td><a href="{{ url_for('reservu', id=post['ĉefŝlosilo']) }}"> {{ _('Réserver') }}</a> </td>
               {% endif %}
-             {% if session['user_name'] == 'andre' %}
+             {% if session['admin'] %}
+             <td><a href="{{ url_for('redonu', id=post['ĉefŝlosilo']) }}"> {{ _('Rendre') }}</a> </td>
             <td><a href="{{ url_for('redakti', id=post['ĉefŝlosilo']) }}"> {{ _('Editer') }}</a> </td>
             <td><form action="{{ url_for('delete', id=post['ĉefŝlosilo']) }}" method="POST">
                 <input type="submit" value={{ _('Supprimer') }}

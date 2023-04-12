@@ -128,9 +128,14 @@ def do_admin_login():
 		if check_password_hash(pwd[0], request.args.get("password")):
 			session['logged_in'] = True
 			session['user_name'] = nom
+			session['admin'] = False
+			admin=is_admin(nom)
+			# print(admin[0])
+			if admin[0] == 1:
+				session['admin'] = True
 		else:
 			message=lazy_gettext('Mot de passe éroné!')
-			
+
 	return render_template("index.html", message=message)
 
 @app.route('/register', methods=['POST',"GET"])
@@ -190,4 +195,12 @@ def reservu(id):
 	post = get_post(id)
 	rezervu_libro(id,session['user_name'])
 	flash('Le livre "{}" a été réservé!'.format(post[0]['Titolo']))
+	return livres()
+
+@app.route('/redonu/<int:id>')
+def redonu(id):
+	print (id)
+	post = get_post(id)
+	redonu_libro(id)
+	flash('Le livre "{}" a été rendu!'.format(post[0]['Titolo']))
 	return livres()

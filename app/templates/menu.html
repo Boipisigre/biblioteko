@@ -26,7 +26,7 @@
      {% if session['logged_in'] %}
         <a class="navbar-item" href="{{url_for('livresdispo')}}">{{ _('Disponible') }}</a>
         <a class="navbar-item" href="{{url_for('livrespret')}}">{{ _('Prêtés') }}</a>
-        {% if session['user_name'] == 'andre' %}
+        {% if session['admin']  %}
           <a class="navbar-item" href="{{url_for('addlivre')}}">{{ _('Ajouter') }}</a>
           {% endif %}
 

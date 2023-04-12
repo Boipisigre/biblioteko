@@ -111,6 +111,13 @@ def rezervu_libro(id,nomo):
     conn.commit()
     conn.close()
 
+def redonu_libro(id):
+    print(id)
+    conn = get_db_connection()
+    conn.execute('UPDATE libroj SET pretaal = NULL , datepret = date() WHERE ĉefŝlosilo = ?', [id] )
+    conn.commit()
+    conn.close()
+
 def add_user(nom,mdp):
     DBCon = get_db_connection()
     # print("=================================")
@@ -138,6 +145,12 @@ def get_user(nom):
     mdp = conn.execute('SELECT hashpwd FROM utilisateur WHERE nom = ?',(nom,)).fetchone()
     conn.close()
     return mdp
+
+def is_admin(nom):
+    conn = get_db_connection()
+    admin = conn.execute('SELECT admin FROM utilisateur WHERE nom = ?',(nom,)).fetchone()
+    conn.close()
+    return admin
 
 def update_note(autoro, titolo, enhavo, id):
     conn = get_db_connection()
