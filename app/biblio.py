@@ -152,9 +152,22 @@ def register():
 @app.route('/logout')
 @app.route("/deconnection")
 def logout():
-    session['logged_in'] = False
-    return render_template("index.html")
+	session['logged_in'] = False
+	session['admin'] = False
+	return render_template("index.html")
 
+@app.route('/user')
+def user():
+	lesusers=list_users()
+
+	return render_template('users.html', posts=lesusers, nombre=len(lesusers))
+
+@app.route('/forigi/<int:id>/', methods=('POST',''))
+def forigi_konton(id):
+	forigi_user(id)
+	lesusers=list_users()
+
+	return render_template('users.html', posts=lesusers, nombre=len(lesusers))
 
 @app.route('/registeruser', methods=['POST',"GET"])
 def registeruser():

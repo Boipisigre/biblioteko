@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class='title'> {{ _('Voici les') }} {% block title %}  {{ _('utilisateurs') }} {% endblock %}  : {{nombre}}</h1>
+<hr>
+<section class="section">
+  <div class="container">
+          <div class="b-table">
+            <div class="table-wrapper has-mobile-cards">
+              <table class="table is-fullwidth is-striped is-hoverable is-fullwidth"">
+                <thead>
+                <tr>
+                  <th></th>
+                
+                  <th>{{ _('Nom') }}</th>
+                  <th>{{ _('Date de création') }}</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+
+        {% for post in posts %}
+                  <tr>
+                    <td>
+                    <form action="{{ url_for('forigi_konton', id=post['id'])}}" method="POST">
+                        <input type="submit" value={{ _('Supprimer') }}
+                                class="btn btn-danger btn-sm"
+                                onclick="return confirm({{ _('Etes-vous sûr de vouloir supprimer cet utilisateur?') }}')">
+                    </form></td>
+
+                      <td data-label="{{ _('Nom') }}">{{post['nom']}}</td>
+                      <td data-label="{{ _('Date de création') }}">{{ post['modif'] }}</td>
+            <td> </td>
+          </tr>
+                  {% endfor %}
+              </tbody>
+
+              </table>
+            </div>
+          </div>
+        </div>
+  </section>
+
+<hr>
+{% endblock %}

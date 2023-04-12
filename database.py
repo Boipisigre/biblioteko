@@ -28,6 +28,20 @@ def get_notes(filtre):
     # print("=================================")
     return  notes
 
+def list_users():
+    DBCon = get_db_connection()
+
+    # print("=================================")
+    # Ouvrir un curseur
+    ltable = DBCon.cursor()
+
+    users = ltable.execute("select * from utilisateur").fetchall()
+
+    ltable.close()
+    DBCon.close()
+    # print("=================================")
+    return  users
+
 
 def get_livres(filtre):
     DBCon = get_db_connection()
@@ -162,5 +176,11 @@ def update_note(autoro, titolo, enhavo, id):
 def delete_livre(id):
     conn = get_db_connection()
     conn.execute('DELETE FROM libroj WHERE ĉefŝlosilo = ?', (id,))
+    conn.commit()
+    conn.close()
+
+def forigi_user(id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM utilisateur WHERE id = ?', [id])
     conn.commit()
     conn.close()
