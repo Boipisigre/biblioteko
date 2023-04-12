@@ -47,12 +47,14 @@ def about():
 def livres():
 	lesnotes=get_notes("*")
 	session['reserver'] = False
+	session['rendre'] = False
 	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/livresdispo")
 def livresdispo():
 	lesnotes=get_livres("*")
 	session['reserver'] = True
+	session['rendre'] = False
 	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 # livrespret
@@ -60,6 +62,7 @@ def livresdispo():
 def livrespret():
 	lesnotes=get_livresprete("*")
 	session['reserver'] = False
+	session['rendre'] = True
 	return render_template('prete.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route('/<int:post_id>/')
@@ -68,7 +71,7 @@ def post(post_id):
 	rows=[]
 	for ligne in post:
 		ligne = dict(ligne)
-		print(ligne)
+		# print(ligne)
 		rows.append(ligne)
 
 		return render_template('unlivre.html', post=rows[0])
@@ -99,18 +102,21 @@ def cherpartitre():
 
 @app.route("/rechercher")
 def rechercher():
-    # return "résultat de ma recherche"
-    txt_recherche =request.args.get("titre")
-    lesnotes=get_notes(txt_recherche)
-    return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
+	txt_recherche =request.args.get("titre")
+	session['reserver'] = False
+	session['rendre'] = False
+	lesnotes=get_notes(txt_recherche)
+
+	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/recheruser")
 def recheruser():
-    # return "résultat de ma recherche"
-    txt_recherche =request.args.get("user")
-    # notepage = render_template("notes.html")
-    lesnotes=get_notes_user(txt_recherche)
-    return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
+	txt_recherche =request.args.get("user")
+	session['reserver'] = False
+	session['rendre'] = False
+	lesnotes=get_notes_user(txt_recherche)
+
+	return render_template('livres.html', posts=lesnotes, nombre=len(lesnotes))
 
 @app.route("/connection")
 def login():

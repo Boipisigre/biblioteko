@@ -99,7 +99,7 @@ def add_notes(col1,col2,col3,col4,col5):
     updtable = DBCon.cursor()
     data = [col1,col2,col3,col4,col5]
     # add_notes(txt_id, txt_titre,txt_rubrique,txt_auteur, txt_editeur)
-    updtable.execute("insert into libroj (ĉefŝlosilo, titolo,rubrikoj,autoro,eldono,ŝanĝi) values (?, ?, ?, ?,?, date())", data)
+    updtable.execute("insert into libroj (ĉefŝlosilo, titolo,rubrikoj,autoro,eldono,dcreate) values (?, ?, ?, ?,?, date())", data)
     DBCon.commit()
     updtable.close()
     DBCon.close()
