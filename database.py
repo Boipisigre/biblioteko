@@ -126,7 +126,7 @@ def rezervu_libro(id,nomo):
     conn.close()
 
 def redonu_libro(id):
-    print(id)
+    #print(id)
     conn = get_db_connection()
     conn.execute('UPDATE libroj SET pretaal = NULL , datepret = date() WHERE ĉefŝlosilo = ?', [id] )
     conn.commit()
@@ -139,6 +139,20 @@ def add_user(nom,mdp):
     updtable = DBCon.cursor()
     data = [nom,mdp]
     updtable.execute("insert into utilisateur (nom,modif, hashpwd) values (?, date(),?)", data)
+    DBCon.commit()
+    updtable.close()
+    DBCon.close()
+    return
+
+def upd_user(nom,mdp):
+    DBCon = get_db_connection()
+        # print("=================================")
+    updtable = DBCon.cursor()
+    data = [mdp,nom]
+    print (mdp)
+    print(nom)
+    print(data)
+    updtable.execute("update utilisateur set hashpwd=? where nom = ?", data)
     DBCon.commit()
     updtable.close()
     DBCon.close()

@@ -144,6 +144,29 @@ def do_admin_login():
 
 	return render_template("index.html", message=message)
 
+@app.route('/changepwd', methods=['POST','GET'])
+def changepwd():
+	return render_template("chgpwd.html")
+
+@app.route('/mdp', methods=['POST',"GET"])
+def do_admin_mdp():
+
+	message = ""
+
+	oldpwd = request.args.get("password")
+	newpwd = request.args.get("newpassword")
+	hashpwd=generate_password_hash(newpwd)
+
+	if oldpwd != newpwd :
+		upd_user(session['user_name'],hashpwd)
+		message = "Modification du mot de passe prise en compte"
+		session['logged_in'] = False
+		session['admin']=False
+	else:
+		message = "Nouveau mot de passe identique à l'ancien"
+
+	return render_template("index.html", message=message)
+
 @app.route('/register', methods=['POST',"GET"])
 @app.route("/enregistre", methods=['POST',"GET"])
 def register():

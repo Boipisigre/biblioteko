@@ -50,6 +50,7 @@
 {% if session['logged_in'] %}
         <a class="navbar-item  " href="#">{{ _('Connection')}}</a>
         <a class="navbar-item is-active" href="{{url_for('logout')}}"">{{ _('De-connection')}}</a>
+        <a class="navbar-item is-active" href="{{url_for('changepwd')}}"">{{ _('Modif. mot de passe')}}</a>
         <a class="navbar-item " href="#">{{ _('Enregistrement')}}</a>
 {% else %}
   <a class="navbar-item is-active " href="{{url_for('login')}}"">{{ _('Connection')}}</a>

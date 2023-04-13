@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}  Changement de mot de passe  {% endblock %}
+{% block content %}
+
+<hr>
+
+<center>
+<h1 class='title'> {{ _('Changement de mot de passe') }}</h1>
+<h2 class="subtitile is-3"> {{ _('Saisissez vos mots de passe') }} </h2>
+  <hr>
+
+<form onsubmit="save_data()" action="/mdp" method="get">
+  <input type="text" id="message" name="username" required readonly placeholder= {{ session['user_name'] }} >
+
+  <input type="password" name="password" required placeholder={{ _('Ancien Mot_de_Passe') }}>
+  <input type="password" name="newpassword" required placeholder={{ _('Nouveau Mot_de_Passe') }}>
+
+  <input type="submit" value={{ _('Sauver') }}>
+</form>
+
+</center>
+
+<hr>
+
+{% endblock %}
