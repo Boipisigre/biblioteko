@@ -3,166 +3,192 @@
 {% block content %}
 <h1 class='title' style="text-align: center;">{% block title %} {{ _('Au sujet') }} {% endblock %} {{ _('de l"application bibliotheque') }}.</h1>
 
-<h2 class='subtitle' style="text-align: center;">de l'association d'Esperanto de Lausanne<br></h2>
+<h2 class='subtitle' style="text-align: center;">{{ _('de l"association d"Esperanto de Lausanne') }}<br></h2>
 
-<h4 class='title is-4'>Qui peut l'utiliser?<br></h4><p>Le site est utilisable par tous, mais seules les personnes ayant ouvert un compte et étant&nbsp;connectées peuvent voir les livres disponibles, déjà prêtés et en réserver.<br></p><br>
+<h4 class='title is-4'>{{ _("Qui peut l'utiliser?") }}<br></h4>
 
-<h4 class='title is-4'> Statut de l'utilisateur<br></h4><p>Les actions possibles changent en fonction du statut de l'utilisateur.<br></p><br>
+  <p>{{ _('Le site est utilisable par tous, mais seules les personnes ayant ouvert un compte et étant&nbsp;connectées peuvent voir les livres disponibles, déjà prêtés et en réserver.') }}<br></p><br>
+
+<h4 class='title is-4'> {{ _("Statut de l'utilisateur") }}<br></h4><p>{{ _("Les actions possibles changent en fonction du statut de l'utilisateur.") }}<br></p><br>
 
 
 <div class="columns is-mobile">
   <div class="column">
-    <strong> Status Connection</strong>
+    <strong> {{ _('Status Connection') }}</strong>
   </div>
   <div class="column">
-    <strong> Lister les livres</strong>
+    <strong> {{ _('Lister les livres') }}</strong>
   </div>
   <div class="column">
-    <strong>lister les disponibles</strong>
+    <strong>{{ _('lister les disponibles') }}</strong>
   </div>
   <div class="column">
-    <strong>lister les non disponibles</strong>
+    <strong>{{ _('lister les Non disponibles') }}</strong>
   </div>
    <div class="column">
-    <strong>réserver</strong>
+    <strong>{{ _('réserver') }}</strong>
   </div>
   <div class="column">
-   <strong>rendre</strong>
+   <strong>{{ _('rendre') }}</strong>
  </div>
   <div>
-    <strong>Ajouter un livre</strong>
+    <strong>{{ _('Ajouter un livre') }}</strong>
  </div>
   <div class="column">
-    <strong>Chercher Titre, Auteur</strong>
+    <strong>{{ _('Chercher Titre, Auteur') }}</strong>
   </div>
   <div class="column">
-  <strong>s'enregister</strong>
+  <strong>{{ _('s"enregister') }}</strong>
   </div>
   <div class="column">
-  <strong> Connecter </strong>
+  <strong> {{ _('Connecter') }} </strong>
   </div>
   <div class="column">
-  <strong> De-Connecter </strong>
+  <strong> {{ _('Changer de mot de passe') }} </strong>
+  </div>
+  <div class="column">
+  <strong> {{ _('De-Connecter') }} </strong>
+  </div>
+  <div class="column">
+  <strong> {{ _('Liste des comptes') }} </strong>
   </div>
     </div>
 <div class="columns is-mobile">
   <div class="column">
-    <strong>Non Connecté</strong>
+    <strong>{{ _('Non Connecté') }}</strong>
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Non
+    {{ _('Non') }}
   </div>
 <div class="column">
-  Non
+  {{ _('Non') }}
 </div>
 <div class="column">
-  Non
+  {{ _('Non') }}
 </div>
 <div class="column">
-  Non
+  {{ _('Non') }}
 </div><div class="column">
-  Non
+  {{ _('Non') }}
 </div>
 <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
+  </div>
+  <div class="column">
+    {{ _('Non') }}
   </div>
 <div class="column">
-  Non
+  {{ _('Non') }}
+</div>
+<div class="column">
+  {{ _('Non') }}
 </div>
 </div>
 <div class="columns is-mobile">
   <div class="column">
-    <strong>Connecté</strong>
+    <strong>{{ _('Connecté') }}</strong>
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
 <div class="column">
-  Oui
+  {{ _('Oui') }}
 </div>
 <div class="column">
-Oui
+{{ _('Oui') }}
 </div>
 <div class="column">
-  Non
+  {{ _('Non') }}
 </div>
 <div class="column">
-  Non
+  {{ _('Non') }}
 </div>
 <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Non
+    {{ _('Non') }}
   </div>
   <div class="column">
-    Non
+    {{ _('Non') }}
   </div>
   <div class="column">
-      Oui
+      {{ _('Oui') }}
+    </div>
+  <div class="column">
+      {{ _('Oui') }}
+    </div>
+    <div class="column">
+      {{ _('Non') }}
     </div>
 </div>
 <div class="columns is-mobile">
   <div class="column">
-    <strong>Connecté Admin</strong>
+    <strong>{{ _('Connecté Admin') }}</strong>
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
 <div class="column">
-  Oui
+  {{ _('Oui') }}
 </div>
 <div class="column">
-  Oui
+  {{ _('Oui') }}
 </div>
 <div class="column">
-  Oui
+  {{ _('Oui') }}
 </div>
 <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
 <div class="column">
-    Oui
+    {{ _('Oui') }}
   </div>
   <div class="column">
-    Non
+    {{ _('Non') }}
   </div>
   <div class="column">
-    Non
+    {{ _('Non') }}
   </div>
   <div class="column">
-      Oui
+      {{ _('Oui') }}
     </div>
+  <div class="column">
+      {{ _('Oui') }}
+    </div>
+    <div class="column">
+        {{ _('Oui') }}
+      </div>
 </div>
 
-<p>Tous les utilisateurs pourront voir la description d'un livre en sélectionnant son numéro.<br></p>
+<p>{{ _("Tous les utilisateurs pourront voir la description d'un livre en sélectionnant son numéro.") }}<br></p>
 <br>
-<h4 class='title is-4' >Les langues</h4>
-<p>Le site est en deux langues Français et Esperanto,<br></p><p>Tous les utilisateurs peuvent changer de langues.<br></p>
-<p> Le changement de langue fait revenir à l'accueil.<br></p>
-<br><h4 class='title is-4'>La connexion<br></h4><p>Il faut s'enregistrer, <strong>Attention</strong> le nom d'utilisateur est unique <br></p>
-<br><h4 class='title is-4'>Futur<br></h4><p>Les fonctions futures permettront <br></p>
-<p> - d'ajouter une description dans la langue du livre.<br></p><p> - de gérer l'envoi d'un e-mail au bibliothécaire pour l'informer du réservation.<br></p>
+<h4 class='title is-4' >{{ _('Les langues') }}</h4>
+<p>{{ _('Le site est en deux langues Français et Esperanto,') }}<br></p><p>{{ _('Tous les utilisateurs peuvent changer de langues.') }}<br></p>
+<p> {{ _("Le changement de langue fait revenir à l'accueil.") }}<br></p>
+<br><h4 class='title is-4'>{{ _('La connexion') }}<br></h4><p>{{ _("Il faut s'enregistrer,") }} <strong>{{ _("Attention") }} </strong> {{ _("le nom d'utilisateur est unique") }}  <br></p>
+<br><h4 class='title is-4'>{{ _("Futur") }} <br></h4><p>{{ _("Les fonctions futures permettront") }}  <br></p>
+<p> - {{ _("d'ajouter une description dans la langue du livre.") }} <br></p><p> - {{ _("de gérer l'envoi d'un e-mail au bibliothécaire pour l'informer du réservation.") }} <br></p>
 
 
 <video width="640" height="480" controls>
  <source src="{{url_for('static',filename='Presentation.mp4')}}" type="video/mp4">
-Your browser does not support the video tag.
+{{ _("Peut-être que votre navigateur ne supporte pas l'affichage de vidéo (tag video).") }}
 </video>
 
 <hr>

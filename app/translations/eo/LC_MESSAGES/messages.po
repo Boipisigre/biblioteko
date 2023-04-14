@@ -1,15 +1,16 @@
-# Esperanto translations for PROJECT.
-# Copyright (C) 2023 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# Esperanto translations for Biblioteko.
+# Copyright (C) 2023 Laũzana-asocio de Esperanto
+# This file is distributed under the same license as the Biblioteko -
+# project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
+"Project-Id-Version: Biblioteko - 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-06 15:29+0200\n"
+"POT-Creation-Date: 2023-04-14 11:27+0200\n"
 "PO-Revision-Date: 2023-03-08 16:54+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Pierre Boizot <Boipi.Sigre@protonmail.com>\n"
 "Language: eo\n"
 "Language-Team: eo <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -18,23 +19,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/biblio.py:126
+#: app/biblio.py:132
 msgid "Utilisateur inconnu!"
 msgstr "Nekonata uzanto!"
 
-#: app/biblio.py:132
+#: app/biblio.py:143
 msgid "Mot de passe éroné!"
 msgstr "Erara pasvorto!"
 
-#: app/biblio.py:158
+#: app/biblio.py:205
 msgid "Utilisateur déjà éxistant"
 msgstr "Jam ekzistanta uzantnomo"
 
-#: app/biblio.py:161
+#: app/biblio.py:208
 msgid "Création Utilisateur OK"
 msgstr "Uzanto-Kreado bone "
 
-#: app/biblio.py:163
+#: app/biblio.py:210
 msgid "Veuillez saisir le code"
 msgstr "Bonvolu enigi la kodon"
 
@@ -42,7 +43,7 @@ msgstr "Bonvolu enigi la kodon"
 msgid "E-mail address"
 msgstr "Retadreso"
 
-#: app/templates/about.html:4 app/templates/menu.html:79
+#: app/templates/about.html:4 app/templates/menu.html:83
 msgid "Au sujet"
 msgstr "Pri"
 
@@ -50,53 +51,189 @@ msgstr "Pri"
 msgid "de l\"application bibliotheque"
 msgstr "de la biblioteka aplikaĵo"
 
+#: app/templates/about.html:6
+msgid "de l\"association d\"Esperanto de Lausanne"
+msgstr "de la biblioteko de la Laũzana-asocio de Esperanto"
+
+#: app/templates/about.html:8
+msgid "Qui peut l'utiliser?"
+msgstr "Kiu povas uzi ĝin?"
+
 #: app/templates/about.html:10
-msgid "Quelles fonctionnalités?"
-msgstr "Kiuj trajtoj?"
+msgid ""
+"Le site est utilisable par tous, mais seules les personnes ayant ouvert "
+"un compte et étant&nbsp;connectées peuvent voir les livres disponibles, "
+"déjà prêtés et en réserver."
+msgstr "La retejo povas esti uzata de ĉiuj, sed nur homoj kiuj malfermis"
+"konto kaj ensalutinta povas vidi disponeblajn librojn,"
+"jam pruntedonis kaj rezervis kelkajn.""
 
-#: app/templates/about.html:13
-msgid "Lister les livres"
-msgstr "Listigu la librojn"
+#: app/templates/about.html:12
+msgid "Statut de l'utilisateur"
+msgstr "Uzanto Statuso"
 
-#: app/templates/about.html:15
-msgid "Editer un livre"
-msgstr "Redakti libron"
-
-#: app/templates/about.html:16
-msgid "Ajout de livre"
-msgstr "Aldoni libron"
+#: app/templates/about.html:12
+msgid "Les actions possibles changent en fonction du statut de l'utilisateur."
+msgstr "La eblaj agoj ŝanĝiĝas depende de la stato de la uzanto."
 
 #: app/templates/about.html:17
-msgid "Rechercher des livres"
-msgstr "Serĉi librojn"
+msgid "Status Connection"
+msgstr "Statuso Konekto"
 
-#: app/templates/about.html:19 app/templates/menu.html:39
-msgid "par Titre"
-msgstr "per titolo"
-
-#: app/templates/about.html:20 app/templates/menu.html:40
-msgid "par Auteur"
-msgstr "per Aũtoro"
+#: app/templates/about.html:20
+msgid "Lister les livres"
+msgstr "Librojn"
 
 #: app/templates/about.html:23
-msgid "Connection utilisateur"
-msgstr "ensaluti "
-
-#: app/templates/about.html:24
-msgid "Deconnection"
-msgstr "elsaluti"
-
-#: app/templates/about.html:25
-msgid "Enregistrer un utilisateur"
-msgstr "Registri uzanton"
+msgid "lister les disponibles"
+msgstr "Haveblaj"
 
 #: app/templates/about.html:26
-msgid "Explication"
-msgstr "Klarigo"
+msgid "lister les Non disponibles"
+msgstr "Ne Haveblaj"
+
+#: app/templates/about.html:29
+msgid "réserver"
+msgstr "Rezervi"
+
+#: app/templates/about.html:32
+msgid "rendre"
+msgstr "Redoni"
+
+#: app/templates/about.html:35
+msgid "Ajouter un livre"
+msgstr "Aldoni unu libron"
+
+#: app/templates/about.html:38
+msgid "Chercher Titre, Auteur"
+msgstr "Serci Titolo, aũtoro"
+
+#: app/templates/about.html:41
+msgid "s\"enregister"
+msgstr "Registri"
+
+#: app/templates/about.html:44 app/templates/login.html:16
+msgid "Connecter"
+msgstr "Konekto"
+
+#: app/templates/about.html:47
+msgid "Changer de mot de passe"
+msgstr "Ŝanĝo de pasvorto"
+
+#: app/templates/about.html:50
+msgid "De-Connecter"
+msgstr "Konekto"
+
+#: app/templates/about.html:53
+msgid "Liste des comptes"
+msgstr "Listo de kontoj"
+
+#: app/templates/about.html:58
+msgid "Non Connecté"
+msgstr "Ne Konektis"
+
+#: app/templates/about.html:61 app/templates/about.html:78
+#: app/templates/about.html:81 app/templates/about.html:84
+#: app/templates/about.html:101 app/templates/about.html:104
+#: app/templates/about.html:107 app/templates/about.html:110
+#: app/templates/about.html:119 app/templates/about.html:128
+#: app/templates/about.html:131 app/templates/about.html:142
+#: app/templates/about.html:145 app/templates/about.html:148
+#: app/templates/about.html:151 app/templates/about.html:154
+#: app/templates/about.html:157 app/templates/about.html:160
+#: app/templates/about.html:169 app/templates/about.html:172
+#: app/templates/about.html:175
+msgid "Oui"
+msgstr "Jes"
+
+#: app/templates/about.html:64 app/templates/about.html:67
+#: app/templates/about.html:70 app/templates/about.html:73
+#: app/templates/about.html:75 app/templates/about.html:87
+#: app/templates/about.html:90 app/templates/about.html:93
+#: app/templates/about.html:113 app/templates/about.html:116
+#: app/templates/about.html:122 app/templates/about.html:125
+#: app/templates/about.html:134 app/templates/about.html:163
+#: app/templates/about.html:166
+msgid "Non"
+msgstr "Ne"
+
+#: app/templates/about.html:98
+msgid "Connecté"
+msgstr "Konektis"
+
+#: app/templates/about.html:139
+msgid "Connecté Admin"
+msgstr "Konektis Administrado"
+
+#: app/templates/about.html:179
+msgid ""
+"Tous les utilisateurs pourront voir la description d'un livre en "
+"sélectionnant son numéro."
+msgstr "Ĉiuj uzantoj povos vidi la priskribon de libro en elektante lian numeron"
+
+#: app/templates/about.html:181
+msgid "Les langues"
+msgstr "La Lingvoj"
+
+#: app/templates/about.html:182
+msgid "Le site est en deux langues Français et Esperanto,"
+msgstr "La retejo estas en du lingvoj franca kaj Esperanto,"
+
+#: app/templates/about.html:182
+msgid "Tous les utilisateurs peuvent changer de langues."
+msgstr "Ĉiuj uzantoj povas ŝanĝi lingvojn"
+
+#: app/templates/about.html:183
+msgid "Le changement de langue fait revenir à l'accueil."
+msgstr "Ŝanĝi la lingvon revenas al la ĉefpaĝo"
+
+#: app/templates/about.html:184
+msgid "La connexion"
+msgstr "La Konekto"
+
+#: app/templates/about.html:184
+msgid "Il faut s'enregistrer,"
+msgstr "Vi devas registriĝi,"
+
+#: app/templates/about.html:184
+msgid "Attention"
+msgstr "Atentu"
+
+#: app/templates/about.html:184
+msgid "le nom d'utilisateur est unique"
+msgstr "uzantnomo estas unika"
+
+#: app/templates/about.html:185
+msgid "Futur"
+msgstr "Estonteco"
+
+#: app/templates/about.html:185
+msgid "Les fonctions futures permettront"
+msgstr "Estontaj funkcioj permesos"
+
+#: app/templates/about.html:186
+msgid "d'ajouter une description dans la langue du livre."
+msgstr "aldoni priskribon en la lingvo de la libro."
+
+#: app/templates/about.html:186
+msgid ""
+"de gérer l'envoi d'un e-mail au bibliothécaire pour l'informer du "
+"réservation."
+msgstr "administri la sendon de retmesaĝo al la bibliotekisto por informi lin pri la rezervo.
+
+#: app/templates/about.html:191
+msgid ""
+"Peut-être que votre navigateur ne supporte pas l'affichage de vidéo (tag "
+"video)."
+msgstr "Eble via retumilo ne subtenas videan montradon"
 
 #: app/templates/ajoutlivre.html:4
 msgid "Ajout"
 msgstr "Aldoni"
+
+#: app/templates/ajoutlivre.html:4
+msgid "d'un livre"
+msgstr "de unu libron"
 
 #: app/templates/ajoutlivre.html:9
 msgid "Saisissez les informations"
@@ -125,13 +262,31 @@ msgstr "Aũtoro"
 msgid "Editeur"
 msgstr "Eldono"
 
-#: app/templates/ajoutlivre.html:42 app/templates/register.html:17
+#: app/templates/ajoutlivre.html:42 app/templates/chgpwd.html:18
+#: app/templates/register.html:17
 msgid "Sauver"
 msgstr "Savi"
 
+#: app/templates/chgpwd.html:8
+msgid "Changement de mot de passe"
+msgstr "Ŝanĝo de pasvorto"
+
+#: app/templates/chgpwd.html:9
+msgid "Saisissez vos mots de passe"
+msgstr "Enigu la uzantonomon"
+
+#: app/templates/chgpwd.html:15
+msgid "Ancien Mot_de_Passe"
+msgstr "malnova pasvorto"
+
+#: app/templates/chgpwd.html:16
+#, fuzzy
+msgid "Nouveau Mot_de_Passe"
+msgstr "Nova pasvorto"
+
 #: app/templates/editer.html:28
 msgid "Modifier"
-msgstr ""
+msgstr "Ŝangi"
 
 #: app/templates/index.html:6
 msgid "Bonjour, "
@@ -143,9 +298,10 @@ msgstr "vi ne estas ensalutinta"
 
 #: app/templates/index.html:16
 msgid "Bienvenue sur la bibliothèque de l'association d'Esperanto de Lausanne"
-msgstr "Bonvenon en la biblioteko de la Lozana-asocio de Esperanto"
+msgstr "Bonvenon en la biblioteko de la Laũzana-asocio de Esperanto"
 
 #: app/templates/livres.html:5 app/templates/prete.html:5
+#: app/templates/users.html:5
 msgid "Voici les"
 msgstr "Jen la"
 
@@ -160,7 +316,7 @@ msgid "Numéro"
 msgstr "Nombro"
 
 #: app/templates/login.html:8 app/templates/menu.html:51
-#: app/templates/menu.html:55
+#: app/templates/menu.html:56
 msgid "Connection"
 msgstr "Konekto"
 
@@ -175,10 +331,6 @@ msgstr "Via_uzantonomo"
 #: app/templates/login.html:15 app/templates/register.html:15
 msgid "Mot_de_Passe"
 msgstr "Pasvorto"
-
-#: app/templates/login.html:16
-msgid "Connecter"
-msgstr "Konekto"
 
 #: app/templates/menu.html:18
 msgid "Accueil"
@@ -208,22 +360,38 @@ msgstr "Aldoni"
 msgid "Recherche"
 msgstr "Serĉi librojn"
 
+#: app/templates/menu.html:39
+msgid "par Titre"
+msgstr "per titolo"
+
+#: app/templates/menu.html:40
+msgid "par Auteur"
+msgstr "per Aũtoro"
+
 #: app/templates/menu.html:47
 msgid "Gestion connexion"
-msgstr "elsaluti"
+msgstr "Administrado de konekto"
 
-#: app/templates/menu.html:52 app/templates/menu.html:56
+#: app/templates/menu.html:52 app/templates/menu.html:57
 msgid "De-connection"
 msgstr "elsaluti"
 
-#: app/templates/menu.html:53 app/templates/menu.html:57
+#: app/templates/menu.html:53
+msgid "Modif. mot de passe"
+msgstr "Ŝangu Pasvorton"
+
+#: app/templates/menu.html:54 app/templates/menu.html:58
 #: app/templates/register.html:5
 msgid "Enregistrement"
 msgstr "Registri"
 
-#: app/templates/menu.html:67
+#: app/templates/menu.html:61
+msgid "Comptes"
+msgstr "Kontoj"
+
+#: app/templates/menu.html:71
 msgid "Changer de langue"
-msgstr "ŝanĝi lingvon"
+msgstr "Ŝanĝi lingvon"
 
 #: app/templates/prete.html:17 app/templates/prete.html:29
 msgid "Emprunteur"
@@ -263,13 +431,12 @@ msgid "de l'Utilisateur"
 msgstr "ensaluti "
 
 #: app/templates/register.html:10
-#, fuzzy
 msgid "Saisissez votre nom et mot de passe"
 msgstr "Enigu la uzantonomon"
 
 #: app/templates/register.html:16
 msgid "code de validation"
-msgstr "Kodo"
+msgstr "Valida kodo"
 
 #: app/templates/unlivre.html:6
 msgid "Voici le "
@@ -283,16 +450,36 @@ msgstr "Librojn"
 msgid "Réserver"
 msgstr "Rezervi"
 
-#: app/templates/unlivre.html:39
+#: app/templates/unlivre.html:40
+msgid "Rendre"
+msgstr "Redoni"
+
+#: app/templates/unlivre.html:42
 msgid "Editer"
 msgstr "Eldoni"
 
-#: app/templates/unlivre.html:41
+#: app/templates/unlivre.html:44 app/templates/users.html:27
 msgid "Supprimer"
 msgstr "Forigi"
 
-#: app/templates/unlivre.html:43
+#: app/templates/unlivre.html:46
 msgid "Etes-vous sûr de vouloir supprimer ce livre?"
+msgstr "Ĉu vi certas, ke vi volas forigi ĉi tiun libron?"
+
+#: app/templates/users.html:5
+msgid "utilisateurs"
+msgstr "Uzantoj "
+
+#: app/templates/users.html:16 app/templates/users.html:32
+msgid "Nom"
+msgstr "Nomo"
+
+#: app/templates/users.html:17 app/templates/users.html:33
+msgid "Date de création"
+msgstr "Krea dato"
+
+#: app/templates/users.html:29
+msgid "Etes-vous sûr de vouloir supprimer cet utilisateur?"
 msgstr "Ĉu vi certas, ke vi volas forigi ĉi tiun libron?"
 
 #~ msgid "Rechercher!"
@@ -325,3 +512,83 @@ msgstr "Ĉu vi certas, ke vi volas forigi ĉi tiun libron?"
 #~ msgid "Veuillez saidir le code"
 #~ msgstr ""
 
+#~ msgid "Quelles fonctionnalités?"
+#~ msgstr "Kiuj trajtoj?"
+
+#~ msgid "Editer un livre"
+#~ msgstr "Redakti libron"
+
+#~ msgid "Rechercher des livres"
+#~ msgstr "Serĉi librojn"
+
+#~ msgid "Connection utilisateur"
+#~ msgstr "ensaluti "
+
+#~ msgid "Deconnection"
+#~ msgstr "elsaluti"
+
+#~ msgid "Enregistrer un utilisateur"
+#~ msgstr "Registri uzanton"
+
+#~ msgid "Explication"
+#~ msgstr "Klarigo"
+
+#~ msgid "de l\"application bibliotheque"
+#~ msgstr "de la biblioteka aplikaĵo"
+
+#~ msgid "de l\"association d\"Esperanto de Lausanne"
+#~ msgstr "de la biblioteko de la Lozana-asocio de Esperanto"
+
+#~ msgid "Qui peut l'utiliser?"
+#~ msgstr "Kiu povas uzi ĝin "
+
+#~ msgid "Statut de l'utilisateur"
+#~ msgstr "Statuso de uzanto"
+
+#~ msgid "Status Connection"
+#~ msgstr "Statuso de Konekto"
+
+#~ msgid "Lister les livres"
+#~ msgstr "Listigu la librojn"
+
+#~ msgid "lister les disponibles"
+#~ msgstr "Listigu la haveblaj"
+
+#~ msgid "lister les Non disponibles"
+#~ msgstr "Listigu la ne haveblaj"
+
+#~ msgid "réserver"
+#~ msgstr "Rezervi"
+
+#~ msgid "rendre"
+#~ msgstr "redoni"
+
+#~ msgid "Ajouter un livre"
+#~ msgstr "Aldoni libron"
+
+#~ msgid "Chercher Titre, Auteur"
+#~ msgstr ""
+
+#~ msgid "s\"enregister"
+#~ msgstr "Registri"
+
+#~ msgid "Changer de mot de passe"
+#~ msgstr "ŝanĝi lingvon"
+
+#~ msgid "De-Connecter"
+#~ msgstr "Konekto"
+
+#~ msgid "Liste des comptes"
+#~ msgstr "Listigu la librojn"
+
+#~ msgid "Connecté"
+#~ msgstr "Konekto"
+
+#~ msgid "Oui"
+#~ msgstr "Jes"
+
+#~ msgid "Non"
+#~ msgstr "Ne"
+
+#~ msgid "Connecté Admin"
+#~ msgstr "Konekto"

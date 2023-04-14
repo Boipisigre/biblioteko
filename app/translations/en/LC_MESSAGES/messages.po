@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-06 15:29+0200\n"
+"POT-Creation-Date: 2023-04-14 11:27+0200\n"
 "PO-Revision-Date: 2023-03-13 11:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/biblio.py:126
+#: app/biblio.py:132
 msgid "Utilisateur inconnu!"
 msgstr ""
 
-#: app/biblio.py:132
+#: app/biblio.py:143
 msgid "Mot de passe éroné!"
 msgstr ""
 
-#: app/biblio.py:158
+#: app/biblio.py:205
 msgid "Utilisateur déjà éxistant"
 msgstr ""
 
-#: app/biblio.py:161
+#: app/biblio.py:208
 msgid "Création Utilisateur OK"
 msgstr ""
 
-#: app/biblio.py:163
+#: app/biblio.py:210
 msgid "Veuillez saisir le code"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "E-mail address"
 msgstr ""
 
-#: app/templates/about.html:4 app/templates/menu.html:79
+#: app/templates/about.html:4 app/templates/menu.html:83
 msgid "Au sujet"
 msgstr ""
 
@@ -50,52 +50,187 @@ msgstr ""
 msgid "de l\"application bibliotheque"
 msgstr ""
 
+#: app/templates/about.html:6
+#, fuzzy
+msgid "de l\"association d\"Esperanto de Lausanne"
+msgstr "Welcome on the library of Esperanto association"
+
+#: app/templates/about.html:8
+msgid "Qui peut l'utiliser?"
+msgstr ""
+
 #: app/templates/about.html:10
-msgid "Quelles fonctionnalités?"
+msgid ""
+"Le site est utilisable par tous, mais seules les personnes ayant ouvert "
+"un compte et étant&nbsp;connectées peuvent voir les livres disponibles, "
+"déjà prêtés et en réserver."
 msgstr ""
 
-#: app/templates/about.html:13
-msgid "Lister les livres"
+#: app/templates/about.html:12
+msgid "Statut de l'utilisateur"
 msgstr ""
 
-#: app/templates/about.html:15
-msgid "Editer un livre"
-msgstr ""
-
-#: app/templates/about.html:16
-msgid "Ajout de livre"
+#: app/templates/about.html:12
+msgid "Les actions possibles changent en fonction du statut de l'utilisateur."
 msgstr ""
 
 #: app/templates/about.html:17
-msgid "Rechercher des livres"
+msgid "Status Connection"
 msgstr ""
 
-#: app/templates/about.html:19 app/templates/menu.html:39
-msgid "par Titre"
-msgstr ""
-
-#: app/templates/about.html:20 app/templates/menu.html:40
-msgid "par Auteur"
+#: app/templates/about.html:20
+msgid "Lister les livres"
 msgstr ""
 
 #: app/templates/about.html:23
-msgid "Connection utilisateur"
-msgstr ""
-
-#: app/templates/about.html:24
-msgid "Deconnection"
-msgstr ""
-
-#: app/templates/about.html:25
-msgid "Enregistrer un utilisateur"
+msgid "lister les disponibles"
 msgstr ""
 
 #: app/templates/about.html:26
-msgid "Explication"
+msgid "lister les Non disponibles"
+msgstr ""
+
+#: app/templates/about.html:29
+msgid "réserver"
+msgstr ""
+
+#: app/templates/about.html:32
+msgid "rendre"
+msgstr ""
+
+#: app/templates/about.html:35
+msgid "Ajouter un livre"
+msgstr ""
+
+#: app/templates/about.html:38
+msgid "Chercher Titre, Auteur"
+msgstr ""
+
+#: app/templates/about.html:41
+msgid "s\"enregister"
+msgstr ""
+
+#: app/templates/about.html:44 app/templates/login.html:16
+msgid "Connecter"
+msgstr ""
+
+#: app/templates/about.html:47
+msgid "Changer de mot de passe"
+msgstr ""
+
+#: app/templates/about.html:50
+msgid "De-Connecter"
+msgstr ""
+
+#: app/templates/about.html:53
+msgid "Liste des comptes"
+msgstr ""
+
+#: app/templates/about.html:58
+msgid "Non Connecté"
+msgstr ""
+
+#: app/templates/about.html:61 app/templates/about.html:78
+#: app/templates/about.html:81 app/templates/about.html:84
+#: app/templates/about.html:101 app/templates/about.html:104
+#: app/templates/about.html:107 app/templates/about.html:110
+#: app/templates/about.html:119 app/templates/about.html:128
+#: app/templates/about.html:131 app/templates/about.html:142
+#: app/templates/about.html:145 app/templates/about.html:148
+#: app/templates/about.html:151 app/templates/about.html:154
+#: app/templates/about.html:157 app/templates/about.html:160
+#: app/templates/about.html:169 app/templates/about.html:172
+#: app/templates/about.html:175
+msgid "Oui"
+msgstr ""
+
+#: app/templates/about.html:64 app/templates/about.html:67
+#: app/templates/about.html:70 app/templates/about.html:73
+#: app/templates/about.html:75 app/templates/about.html:87
+#: app/templates/about.html:90 app/templates/about.html:93
+#: app/templates/about.html:113 app/templates/about.html:116
+#: app/templates/about.html:122 app/templates/about.html:125
+#: app/templates/about.html:134 app/templates/about.html:163
+#: app/templates/about.html:166
+msgid "Non"
+msgstr ""
+
+#: app/templates/about.html:98
+msgid "Connecté"
+msgstr ""
+
+#: app/templates/about.html:139
+msgid "Connecté Admin"
+msgstr ""
+
+#: app/templates/about.html:179
+msgid ""
+"Tous les utilisateurs pourront voir la description d'un livre en "
+"sélectionnant son numéro."
+msgstr ""
+
+#: app/templates/about.html:181
+msgid "Les langues"
+msgstr ""
+
+#: app/templates/about.html:182
+msgid "Le site est en deux langues Français et Esperanto,"
+msgstr ""
+
+#: app/templates/about.html:182
+msgid "Tous les utilisateurs peuvent changer de langues."
+msgstr ""
+
+#: app/templates/about.html:183
+msgid "Le changement de langue fait revenir à l'accueil."
+msgstr ""
+
+#: app/templates/about.html:184
+msgid "La connexion"
+msgstr ""
+
+#: app/templates/about.html:184
+msgid "Il faut s'enregistrer,"
+msgstr ""
+
+#: app/templates/about.html:184
+msgid "Attention"
+msgstr ""
+
+#: app/templates/about.html:184
+msgid "le nom d'utilisateur est unique"
+msgstr ""
+
+#: app/templates/about.html:185
+msgid "Futur"
+msgstr ""
+
+#: app/templates/about.html:185
+msgid "Les fonctions futures permettront"
+msgstr ""
+
+#: app/templates/about.html:186
+msgid "d'ajouter une description dans la langue du livre."
+msgstr ""
+
+#: app/templates/about.html:186
+msgid ""
+"de gérer l'envoi d'un e-mail au bibliothécaire pour l'informer du "
+"réservation."
+msgstr ""
+
+#: app/templates/about.html:191
+msgid ""
+"Peut-être que votre navigateur ne supporte pas l'affichage de vidéo (tag "
+"video)."
 msgstr ""
 
 #: app/templates/ajoutlivre.html:4
 msgid "Ajout"
+msgstr ""
+
+#: app/templates/ajoutlivre.html:4
+msgid "d'un livre"
 msgstr ""
 
 #: app/templates/ajoutlivre.html:9
@@ -125,8 +260,25 @@ msgstr ""
 msgid "Editeur"
 msgstr ""
 
-#: app/templates/ajoutlivre.html:42 app/templates/register.html:17
+#: app/templates/ajoutlivre.html:42 app/templates/chgpwd.html:18
+#: app/templates/register.html:17
 msgid "Sauver"
+msgstr ""
+
+#: app/templates/chgpwd.html:8
+msgid "Changement de mot de passe"
+msgstr ""
+
+#: app/templates/chgpwd.html:9
+msgid "Saisissez vos mots de passe"
+msgstr ""
+
+#: app/templates/chgpwd.html:15
+msgid "Ancien Mot_de_Passe"
+msgstr ""
+
+#: app/templates/chgpwd.html:16
+msgid "Nouveau Mot_de_Passe"
 msgstr ""
 
 #: app/templates/editer.html:28
@@ -148,6 +300,7 @@ msgid "Bienvenue sur la bibliothèque de l'association d'Esperanto de Lausanne"
 msgstr "Welcome on the library of Esperanto association"
 
 #: app/templates/livres.html:5 app/templates/prete.html:5
+#: app/templates/users.html:5
 msgid "Voici les"
 msgstr ""
 
@@ -162,7 +315,7 @@ msgid "Numéro"
 msgstr ""
 
 #: app/templates/login.html:8 app/templates/menu.html:51
-#: app/templates/menu.html:55
+#: app/templates/menu.html:56
 msgid "Connection"
 msgstr ""
 
@@ -176,10 +329,6 @@ msgstr ""
 
 #: app/templates/login.html:15 app/templates/register.html:15
 msgid "Mot_de_Passe"
-msgstr ""
-
-#: app/templates/login.html:16
-msgid "Connecter"
 msgstr ""
 
 #: app/templates/menu.html:18
@@ -210,20 +359,36 @@ msgstr ""
 msgid "Recherche"
 msgstr ""
 
+#: app/templates/menu.html:39
+msgid "par Titre"
+msgstr ""
+
+#: app/templates/menu.html:40
+msgid "par Auteur"
+msgstr ""
+
 #: app/templates/menu.html:47
 msgid "Gestion connexion"
 msgstr ""
 
-#: app/templates/menu.html:52 app/templates/menu.html:56
+#: app/templates/menu.html:52 app/templates/menu.html:57
 msgid "De-connection"
 msgstr ""
 
-#: app/templates/menu.html:53 app/templates/menu.html:57
+#: app/templates/menu.html:53
+msgid "Modif. mot de passe"
+msgstr ""
+
+#: app/templates/menu.html:54 app/templates/menu.html:58
 #: app/templates/register.html:5
 msgid "Enregistrement"
 msgstr ""
 
-#: app/templates/menu.html:67
+#: app/templates/menu.html:61
+msgid "Comptes"
+msgstr ""
+
+#: app/templates/menu.html:71
 msgid "Changer de langue"
 msgstr ""
 
@@ -284,16 +449,36 @@ msgstr ""
 msgid "Réserver"
 msgstr ""
 
-#: app/templates/unlivre.html:39
+#: app/templates/unlivre.html:40
+msgid "Rendre"
+msgstr ""
+
+#: app/templates/unlivre.html:42
 msgid "Editer"
 msgstr ""
 
-#: app/templates/unlivre.html:41
+#: app/templates/unlivre.html:44 app/templates/users.html:27
 msgid "Supprimer"
 msgstr ""
 
-#: app/templates/unlivre.html:43
+#: app/templates/unlivre.html:46
 msgid "Etes-vous sûr de vouloir supprimer ce livre?"
+msgstr ""
+
+#: app/templates/users.html:5
+msgid "utilisateurs"
+msgstr ""
+
+#: app/templates/users.html:16 app/templates/users.html:32
+msgid "Nom"
+msgstr ""
+
+#: app/templates/users.html:17 app/templates/users.html:33
+msgid "Date de création"
+msgstr ""
+
+#: app/templates/users.html:29
+msgid "Etes-vous sûr de vouloir supprimer cet utilisateur?"
 msgstr ""
 
 #~ msgid "Votre Nom"
@@ -330,5 +515,89 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Veuillez saidir le code"
+#~ msgstr ""
+
+#~ msgid "Quelles fonctionnalités?"
+#~ msgstr ""
+
+#~ msgid "Editer un livre"
+#~ msgstr ""
+
+#~ msgid "Ajout de livre"
+#~ msgstr ""
+
+#~ msgid "Rechercher des livres"
+#~ msgstr ""
+
+#~ msgid "Connection utilisateur"
+#~ msgstr ""
+
+#~ msgid "Deconnection"
+#~ msgstr ""
+
+#~ msgid "Enregistrer un utilisateur"
+#~ msgstr ""
+
+#~ msgid "Explication"
+#~ msgstr ""
+
+#~ msgid "de l\"application bibliotheque"
+#~ msgstr ""
+
+#~ msgid "de l\"association d\"Esperanto de Lausanne"
+#~ msgstr "Welcome on the library of Esperanto association"
+
+#~ msgid "Qui peut l'utiliser?"
+#~ msgstr ""
+
+#~ msgid "Statut de l'utilisateur"
+#~ msgstr ""
+
+#~ msgid "Status Connection"
+#~ msgstr ""
+
+#~ msgid "Lister les livres"
+#~ msgstr ""
+
+#~ msgid "lister les disponibles"
+#~ msgstr ""
+
+#~ msgid "lister les Non disponibles"
+#~ msgstr ""
+
+#~ msgid "réserver"
+#~ msgstr ""
+
+#~ msgid "rendre"
+#~ msgstr ""
+
+#~ msgid "Ajouter un livre"
+#~ msgstr ""
+
+#~ msgid "Chercher Titre, Auteur"
+#~ msgstr ""
+
+#~ msgid "s\"enregister"
+#~ msgstr ""
+
+#~ msgid "Changer de mot de passe"
+#~ msgstr ""
+
+#~ msgid "De-Connecter"
+#~ msgstr ""
+
+#~ msgid "Liste des comptes"
+#~ msgstr ""
+
+#~ msgid "Connecté"
+#~ msgstr ""
+
+#~ msgid "Oui"
+#~ msgstr ""
+
+#~ msgid "Non"
+#~ msgstr ""
+
+#~ msgid "Connecté Admin"
 #~ msgstr ""
 
