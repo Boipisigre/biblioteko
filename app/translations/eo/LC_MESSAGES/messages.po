@@ -122,7 +122,7 @@ msgstr "Ŝanĝo de pasvorto"
 
 #: app/templates/about.html:50
 msgid "De-Connecter"
-msgstr "Konekto"
+msgstr "Elsaluti"
 
 #: app/templates/about.html:53
 msgid "Liste des comptes"
